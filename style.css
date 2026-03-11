@@ -453,11 +453,156 @@ footer{
     text-decoration: none;
     color: var(--text);
     font-family: 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+    transition: all 0.3s ease;
     
 }
 
 #classes-table td a:hover{
     color: var(--secondary);
+}
+
+#classes-table tbody tr:hover{
+    box-shadow:0 0 20px #3a3c45b1;
+    
+}
+
+
+.badge-adv{
+  display: inline-block;
+  padding: 4px 8px;
+  background-color: #b41111;
+  color: white;
+  border-radius: 50px;
+  text-align: center;
+}
+
+.badge-beg{
+  display: inline-block;
+  padding: 4px 8px;
+  background-color: #0cb00c;
+  color: white;
+  border-radius: 50px;
+  text-align: center;
+}
+
+.badge-int{
+  display: inline-block;
+  padding: 4px 8px;
+  background-color: #dc5517;
+  color: white;
+  border-radius: 50px;
+  text-align: center;
+}
+
+.badge-all{
+  display: inline-block;
+  padding: 4px 8px;
+  background-color: #2828a9;
+  color: white;
+  border-radius: 50px;
+  text-align: center;
+}
+
+/*trainers page part*/
+
+
+.trainers-cards-container {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+}
+
+.trainer-card{
+    flex: 0 0 100%;
+    padding: 1.5rem;
+    border-radius: 2rem;
+    gap: 10px;
+    background: var(--primary);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    flex-direction: column;
+    margin-right: 2rem;
+    transform: scale(1);
+    margin: 1rem;
+    transition: all 0.3s ease;
+}
+.female:hover {
+    transform: scale(1.15);
+    box-shadow: 0 1rem 2rem rgba(65, 65, 65, 0.277);
+    background: linear-gradient(135deg,var(--primary) 0%,#310d2e 75%, #6E0C32  100%);
+}
+.male:hover {
+    transform: scale(1.15);
+    box-shadow: 0 1rem 2rem rgba(65, 65, 65, 0.277);
+    background: linear-gradient(135deg,var(--primary) 0%,#13394A 80%, #1A4F66   100%);
+}
+.trainer-card img{
+    border-radius:50%;
+    background-color: var(--bg);
+    padding: 30px ;
+    text-align: center;
+    display: flex;
+    margin-bottom: 1rem;
+    background-size: cover;
+}
+
+.trainer-card figcaption{
+    text-decoration: none;
+    color: var(--text);
+    font-weight: 500;    
+
+}
+
+.trainer-card figcaption .title{
+    font-weight: bold;
+    color: var(--accent);
+    font-family: "Oswald", sans-serif;
+    font-size: 20px;
+    text-decoration: underline;
+    text-decoration-style: wavy;
+    text-decoration-color: #dcf7639a;
+    text-decoration-skip-ink: all ;
+}
+
+.trainer-card figcaption a{
+    text-decoration: none;
+    color: var(--text);
+    font-family: "Oswald" , sans-serif;
+    font-size: 35px;
+    display: block;
+    text-align: center;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 5px var(--text);
+}
+
+.trainer-card figcaption a:hover{
+    text-decoration: none;
+    color: var(--secondary);
+    font-family: "Oswald" , sans-serif;
+    font-size: 1.5rem;
+    display: block;
+    text-align: center;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 5px var(--secondary);
+    transition: all 0.3s ease;
+
+}
+#work-with-us address a{
+    font-family: "Oswald" , sans-serif;
+    font-style: italic;
+    color: var(--secondary);
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 700;
+
+}
+
+#work-with-us address a:hover{
+    color: var(--text);
+    transition: all 0.2s ease;
+
 }
 
 
@@ -702,7 +847,7 @@ input[type="checkbox"]:focus{
 
 
 #contact-form{
-    flex: 0 0 55%;
+    flex: 0 0 100%;
 
 }
 
@@ -806,6 +951,15 @@ iframe:hover{
     #classes-table,#opening-hours-table { overflow-x: visible; display: revert; }
     #classes-table table,#opening-hours-table table { font-size: 0.9em; }
     #classes-table th,#classes-table td,#opening-hours-table th,#opening-hours-table td { padding: 12px 15px; }
+    .trainer-card {
+        flex: 0 0 20rem;
+        padding: 3rem;
+        margin: 3rem;
+        transform: scale(1.1);
+    }
+    .trainer-card img { padding: 75px; }
+    .trainer-card figcaption a,.trainer-card figcaption a:hover { font-size: 35px; }
+    #contact-form{flex: 0 0 55%;}
 }
 
 /*responsive on tablet*/
@@ -838,4 +992,12 @@ iframe:hover{
     #contact-us,#location,#opening-hours-table { font-size: 1.1rem; padding: 1.5rem; }
     #classes-table table,
     #opening-hours-table table { font-size: 0.85em; }
+    .trainer-card {
+        flex: 0 0 18rem;
+        padding: 2rem;
+        margin: 1.5rem;
+        transform: scale(1.05);
+    }
+    .trainer-card img { padding: 50px; }
+    .trainer-card figcaption a,.trainer-card figcaption a:hover { font-size: 1.75rem; }
 }
