@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact-Grymus</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Syne:wght@400..800&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <!--NAVIGATION BAR-->
+
+    <nav>
+        <img src="" alt="Grymus Logo" height="150" width="100">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="classes.html">Classes</a></li>
+            <li><a href="membership.html">Membership</a></li>
+            <li><a href="trainers.html">Trainers</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main id="contact-form-and-info">
+        <!--USER CONTACT FORM SECTION-->
+        <section id="contact-form">
+            <h2>Contact Form</h2>
+            <form>
+                <fieldset>
+                    <legend>Enter your personal information</legend>
+                    <label for="name">Name: </label>
+                    <input type="text" id="name" placeholder="your name.." name="name" required>
+
+                    <label for="email">Email: </label>
+                    <input type="email" id="email" placeholder="youremail@example.com" name="user-email" required>
+
+                    <label for="subject">Subject: </label>
+                    <input type="text" id="subject" placeholder="subject...">
+
+                    <label for="message">Your Message: </label>
+                    <textarea name="message" id="message" rows="6"></textarea>
+
+                    <button>Send</button>
+                </fieldset>
+            </form>
+        </section>
+        <div id="info-block">
+             <!--CONTACT US SECTION-->
+           <section id="contact-us">
+               <h2>Contact Us</h2>
+               <address>
+                   Grymus Gym <br>
+                   Zone Industrielle Palma <br>
+                   Constantine,Algeria <br>
+                   <strong>Phone: </strong><a href="tel:+213000111223">+213 000 111 223</a> <br>
+                   <strong>Email: </strong><a href="mailto:contact@grymus.com">contact@grymus.com</a>
+               </address>
+           </section>
+           <section id="location">
+              <h2>Our Location</h2>
+              <iframe 
+               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1277.3877498089932!2d6.588295445931087!3d36.330712413253565!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12f170ba9d16a695%3A0x4fec1e8cd1db6e6f!2sZone%20industriel%20Grymus%20%20_%20Gym!5e0!3m2!1sfr!2s!4v1772529506059!5m2!1sfr!2sdz" 
+               width="600" 
+               height="450" 
+               style="border:0;" 
+               allowfullscreen="" 
+               loading="lazy" 
+               referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+            </section>
+            <!--OPENING HOURS TABLE SECTION-->
+           <section id="opening-hours-table">
+               <h2>Opening Hours</h2>
+               <table>
+                   <caption>View Our Opening Hours</caption>
+                   <thead>
+                       <tr>
+                           <th>Day</th>
+                           <th>Time</th>
+                       </tr>
+                   </thead>
+                   <tbody>
+                       <tr>
+                           <td>Sat-Thurs</td>
+                           <td>6 AM-6 PM</td>
+                       </tr>
+                       <tr>
+                           <td>Fri</td>
+                           <td>2 PM-8 PM</td>
+                       </tr>
+                   </tbody>
+                   <tfoot>
+                       <tr>
+                         <td>Closed On</td>
+                         <td>Holidays</td>
+                       </tr>
+                   </tfoot>
+               </table>
+           </section>
+        </div>
+    </main>
+     <!--FOOTER SECTION-->
+    <footer>
+        <div id="footer-columns">
+            <div class="footer-column">
+               <h3>Contact Info</h3>
+               <ul>
+                 <li><strong>Address:</strong> Grymus gym,Zone Industrielle Palma,Constantine,Algeria.</li>
+                 <li><strong>Phone:</strong> +213 000 111 223</li>
+                 <li><strong>Email:</strong> contact@grymus.com</li>
+                 <li><strong>Hours:</strong> Sunday - Thursday, 10:00 AM - 4:00 PM</li>
+               </ul>
+            </div>
+            <div class="footer-column">
+               <h3>Follow Us</h3>
+               <ul>
+                   <li><a href="">Facebook</a></li>
+                   <li><a href="">Instagram</a></li>
+                   <li><a href="">TikTok</a></li>
+               </ul>
+           </div>
+           <div class="footer-column">
+               <h3>Quick Links</h3>
+               <ul>
+                 <li><a href="contact.html#opening-hours-table">Opening Hours</a></li>
+               </ul>
+           </div>
+        </div>
+        <p>&copy; 2026 Grymus Gym ,All rights reserved.</p>
+   </footer>
+
+
+
+</body>
+</html>

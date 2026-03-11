@@ -1,0 +1,841 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+
+}
+
+body{
+    background: var(--bg);
+    line-height: 1.6;
+    font-size: 1rem;
+    font-family: "Roboto", sans-serif;
+    overflow-x: hidden;
+}
+
+
+/*colors*/
+
+:root {
+    --primary: #0D2531;       
+    --accent: #DCF763;  
+    --secondary: #B84900;      
+    --bg: #1C1D21;      
+    --text: #FEF9FF;           
+}
+
+
+/*navigation part*/
+
+nav{
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 0 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: var(--primary);
+    align-items: center;
+    box-shadow: 0 2px 7px rgba(0, 0, 0, 0.504);
+    max-width: 100%;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0.75rem;
+
+}
+
+nav li a{
+    text-decoration: none;
+    font-size: 0.85rem;
+    color: var(--text);
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    padding: 0.5rem 0;
+    transition: color 0.3s ease;
+}
+
+
+
+
+nav li a:hover{
+    color: var(--accent);
+    
+}
+
+nav li a.active{
+    color: var(--accent);
+    font-weight: 700;
+    border-bottom: 2px solid var(--accent);
+}
+
+/*hero part*/
+
+#hero{
+    height: 90vh;
+    background-attachment: fixed;
+    padding: 0 4%;
+    background:var(--primary);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+    gap: 30px;
+}
+
+#hero>h1{
+    color: var(--text);
+    font-size: 2rem;
+    font-weight: 700;
+    font-family: "Oswald", sans-serif;
+    margin-bottom: 1rem;
+    letter-spacing: -2px;
+}
+
+#hero  span{
+    color: var(--accent);
+    font-family: "Oswald", sans-serif;
+    font-size: 2.5rem;
+    text-shadow: 0 0 25px #dcf7635b;
+}
+
+#hero > p{
+    color: var(--text);
+    font-size: 1rem;
+    font-weight: 300;
+    padding: 1rem;
+    margin-bottom: 2rem;
+}
+
+#hero > a{
+    text-decoration: none;
+    color: var(--text);
+    font-size: 1.25rem;
+    font-weight: bold;
+    background-color: var(--secondary);
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow:0 0 20px var(--secondary);
+}
+
+#hero > a:hover{
+    background: #8a3700;
+    color: #fef9ffc6;
+}
+
+main {
+    padding: 2rem 4%;
+}
+
+section h2{
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--text);
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    letter-spacing: -1px;
+    position: relative;
+}
+h2+p{
+    color: #fef9ff7f;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+/*homepage gym facilities part*/
+
+#featured-gym-facilities,#membership-plans{
+    padding: 1rem;
+    margin-bottom: 3rem;
+}
+
+#gym-facilities-cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3rem;
+    margin-top: 4rem;
+    
+}
+
+.gym-facility-card{
+    flex: 0 0 100%;
+    padding: 3rem;
+    background-color: var(--primary);
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    border-radius: 2rem;
+    transition: all 0.3s ease;
+
+}
+.gym-facility-card:hover{
+    box-shadow:  0 0 20px var(--accent);
+    transform: translateY(10px);
+}
+
+.gym-facility-card img{
+    background-color: #1e2a31;
+    padding: 4rem;
+    border-radius: 2rem;
+    text-align: center;
+}
+
+.gym-facility-card h3{
+    color: var(--accent);
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    text-align: left;
+    text-shadow: 0 0 20px #dcf76367;
+    font-family: "Oswald",sans-serif;
+}
+
+
+.gym-facility-card ul{
+    list-style: none;
+    text-align: left;
+    line-height: 2;
+}
+.gym-facility-card li{
+    padding-top: 0.6rem;
+    padding-bottom: 0.6rem;
+    color: var(--text);
+    font-size: 1rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.gym-facility-card li::before{
+    content: "▸";
+    color: var(--secondary);
+    position: absolute;
+    left: 0;
+}
+
+/*homepage membership plans part*/
+
+#membership-cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3rem;
+    margin:4rem 0 8rem 0;
+}
+
+.membership-plan-card{
+    flex: 0 0 100%;
+    text-align: center;
+    background: var(--primary);
+    padding: 4rem;
+    border-radius: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    transition: all 0.3s ease;
+   
+}
+
+.membership-plan-card:hover{
+    box-shadow: inset 0 0 20px #b84a00d3;
+    transform: scale(1.02);
+}
+
+.membership-plan-card h3{
+    color: var(--secondary);
+    font-size: 1.75rem;
+    font-family: "Oswald",sans-serif;
+    text-transform: uppercase;
+}
+
+.membership-plan-card span{
+    color: var(--accent);
+    font-style: italic;
+}
+
+.membership-plan-card img{
+    height: 200px;
+    width: 200px;
+}
+
+.membership-plan-card ul{
+    list-style: none;
+    color: var(--text);
+    text-align: left;
+    line-height: 2;
+    padding: 2rem;
+    
+}
+
+.membership-plan-card li{
+    font-size: 1.1rem;
+    font-weight: 700;
+    padding-left: 2rem;
+    text-transform: uppercase;
+    position: relative;
+    font-family: 'roboto',sans-serif;
+    
+}
+.membership-plan-card li::before{
+    content: "✔";
+    color: var(--accent);
+    text-shadow: 0 0 10px #dcf7636a;
+    position: absolute;
+    left: 0;
+}
+
+
+.membership-plan-card a{
+    padding: 1rem;
+    text-decoration: none;
+    font-size: 1.25rem;
+    background: var(--secondary);
+    border-radius: 1.5rem;
+    color: var(--text);
+    font-weight: 600;
+    margin-top: auto;
+}
+
+.membership-plan-card a::before{
+    content: '\00BB';
+    color: var(--text);
+}
+
+.membership-plan-card p{
+    color: var(--accent);
+    text-shadow: 0 0 10px #dcf763be;
+    text-transform: uppercase;
+}
+
+.membership-plan-card a:hover{
+    background: #8a3700;
+    color: #fef9ffc6;
+}
+
+
+/*footer part*/
+
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    background-color: var(--primary);
+    padding: 1rem;
+    color: var(--text);
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.504);
+}
+
+#footer-columns{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.footer-column{
+    padding: 2rem;
+    flex: 1 1 15.5rem;
+}
+
+.footer-column ul{
+    list-style: none;
+    line-height: 2;
+}
+
+.footer-column h3,.footer-column a{
+    padding-bottom: 0.5rem;
+    color: var(--secondary);
+    text-shadow: 0 0 15px #b84a008d;
+} 
+
+.footer-column a,#contact-us a{
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--text);
+}
+
+.footer-column a:hover,#contact-us a:hover{
+    color: var(--accent);
+    text-shadow: 0 0 15px #dcf76364;
+    text-decoration: underline var(--accent);
+}
+
+
+
+
+.page-header{
+    padding: 3rem 1.5rem ;
+    text-align: center;
+    background: var(--primary);
+}
+.page-header h1{
+    text-transform: uppercase;
+    letter-spacing: -2px;
+    font-size: 2rem;
+    font-family: 'Oswald',sans-serif;
+    color: var(--text);
+    
+
+}
+
+.page-header span{
+    color: var(--accent);
+    text-shadow: 0 0 10px #dcf7638b;
+}
+
+.page-header p{
+    color: var(--text);
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-style: italic;
+}
+
+
+/*classes part*/
+
+
+#classes-table caption{
+    color: var(--text);
+    font-family:"Oswald",sans-serif ;
+
+ }
+
+#classes-table,#opening-hours-table{
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    display: block;
+}
+
+
+#classes-table table,#opening-hours-table table{
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.8em;
+    min-width: 400px;
+    border-radius: 9px 9px 0 0;
+    overflow: hidden;
+    box-shadow:0 0 20px #3a3c45b1;
+    transition: all 0.3s ease;
+}
+#classes-table thead tr,#opening-hours-table thead tr{
+    color: var(--accent);
+    text-align: center;
+    background-color: var(--primary);
+    font-weight: 500;
+}
+#classes-table th,#classes-table td,#opening-hours-table th,#opening-hours-table td{
+    padding: 8px 10px;
+    font-weight: 500;
+}
+
+#classes-table tbody tr:nth-of-type(even),#opening-hours-table tbody tr:nth-of-type(even){
+    background-color:#27282d9e;
+}
+
+#classes-table td,#opening-hours-table td{
+    border: 1px solid var(--primary);
+}
+
+#classes-table td, td a,#opening-hours-table td{
+    text-decoration: none;
+    color: var(--text);
+    font-family: 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+    
+}
+
+#classes-table td a:hover{
+    color: var(--secondary);
+}
+
+
+/*membership page part*/
+
+#membership-plans-container{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-top: 4rem;
+}
+
+.membership-plan{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    flex:0 0 26rem;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--primary);
+    padding: 4rem;
+    border-radius: 1.25rem;
+    gap: 1rem;
+    transition: all 0.3s ease;
+    
+}
+
+.membership-plan:hover{
+    transform: scale(1.05);
+    background: linear-gradient(135deg,var(--primary) 0%,#102c3a 50%, #1c3f3c 75%,#dcf76368 100%);
+}
+
+.membership-plan h3{
+    color: var(--text);
+    font-size: 2rem;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    margin-bottom: 2rem;
+}
+
+.membership-plan h3 span{
+    color: var(--secondary);
+}
+
+.membership-plan h3 .badge{
+    color: var(--accent);
+    text-shadow: 0 0 20px #dcf76360;
+}
+
+.membership-plan h3 .badge::before{
+    content: "\2605";
+    color: var(--secondary);
+    font-size: 2.5rem;
+    margin-right: 6px;
+    text-shadow: 0 0 10px var(--secondary);
+}
+
+.recommended{
+    box-shadow: 0 0 30px #b84a009d;
+}
+
+.membership-plan h4{
+    color: var(--text);
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    letter-spacing: -0.5px;
+}
+
+.membership-plan dl{
+    text-align: left;
+    padding: 0.75rem;
+}
+.membership-plan dt{
+    color: var(--secondary);
+    font-weight: 700;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+.membership-plan dd{
+    color: var(--text);
+    font-weight: 500;
+}
+
+.price{
+    font-weight: 700;
+    font-size: 2rem;
+    color: var(--accent);
+    text-shadow: 0 0 10px #dcf7639b;
+    text-transform: uppercase;
+    font-family: "Oswald",sans-serif;
+    letter-spacing: -2px;
+    margin-bottom: 1rem;
+}
+
+.price::after{
+    content:'';
+    display: block;
+    width: 40%;
+    height: 4px;
+    margin-top: 4px;
+    background: var(--accent);
+    border-radius: 2px;
+    opacity: 0.6;
+}
+
+#registration-form{
+    padding: 1rem;
+}
+
+#registration-form fieldset,#contact-form fieldset{
+    padding: 1.5rem;
+    border-radius: 1rem;
+    background: var(--primary);
+    border-color: var(--accent);
+    margin: 1.5rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    box-shadow: 0 0 30px #dcf76340;
+}
+
+#registration-form fieldset legend,#contact-form fieldset legend{
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: -0.5px;
+    font-weight: 700;
+    font-size: 1.2rem;
+    font-family: 'Oswald',sans-serif;
+}
+
+#registration-form fieldset input,#contact-form input{
+    padding: 1rem;
+    border-radius: 1rem;
+    color: var(--secondary);
+    font-weight: 600;
+    width: 90%;
+    transition: all 0.2s ease;
+}
+
+
+input[type="radio"],input[type="checkbox"]{
+    accent-color: var(--accent);
+}
+
+input[type="radio"]:checked:focus ,input[type="radio"]:checked:hover{
+    box-shadow: 0 0 8px #dcf76366;
+    cursor: pointer;
+}
+
+input[type="checkbox"]:focus{
+    box-shadow: 0 0 8px #dcf76366;
+    cursor: pointer;
+}
+
+#plan-radio{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+#registration-form fieldset input:focus,#contact-form input:focus,#contact-form textarea:focus{
+    background-color: #dcf763c8;
+    outline: none;
+    border: 3px solid var(--secondary);
+    box-shadow: inset 0 0 10px #b84a00d7;
+}
+
+#registration-form fieldset input:hover,#contact-form input:hover{
+    transform: scale(1.02);
+}
+
+
+
+#plan-radio>label{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    margin-bottom: 0.5rem;
+}
+
+#registration-form fieldset label,#contact-form fieldset label{
+    color: var(--text);
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+#terms-and-conditions{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+#terms-and-conditions label{
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text);
+}
+
+#terms-and-conditions a{
+    text-decoration: none;
+    color: var(--secondary);
+    transition: all 0.3s ease;
+
+}
+
+#terms-and-conditions a:hover{
+    text-shadow: 0 0 10px var(--secondary);
+    transform: scale(1.05);
+}
+
+
+/*contact page*/
+
+#registration-form button,#contact-form button{
+    padding: 1rem;
+    font-size: 1.25rem;
+    color: var(--text);
+    background: var(--secondary);
+    border-radius: 1rem;
+    border: none;
+    font-weight: 700;
+    margin: 1.5rem;
+    transition: all 0.3s ease;
+
+}
+
+#registration-form button:hover,#contact-form button:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 10px #b84a0083;
+}
+
+
+
+
+#contact-form{
+    flex: 0 0 55%;
+
+}
+
+#contact-form textarea{
+    border-radius: 0.5rem;
+    margin: 1rem 0;
+    resize: none;
+    height: 200px;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+#contact-form textarea:hover{
+    box-shadow: 0 0 15px var(--secondary);
+    transform: scale(1.025);
+}
+
+#info-block{
+    flex: 0 0 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#contact-form-and-info{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 3rem;
+}
+
+iframe{
+    width: 100%;
+    height: 300px;
+    border-radius: 1rem;
+    margin: 1.5rem 0;
+    transition: all 0.3s ease;
+
+}
+
+iframe:hover{
+    box-shadow: 0 0 20px #dcf763cf;
+    transform: scale(1.025);
+}
+#contact-us,#location,#opening-hours-table{
+    text-align: center;
+    color: var(--text);
+    font-size: 1rem;
+    padding: 1rem;
+}
+#contact-us strong{
+    color: var(--accent);
+    font-family: 'oswald',sans-serif;
+    font-size: 1.3rem;
+}
+
+#opening-hours-table caption{
+    padding: 1.5rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: "oswald",sans-serif;
+    color: var(--secondary);
+}
+
+#opening-hours-table td:hover,#opening-hours-table th:hover{
+    transform: scale(1.05);
+}
+
+/*responsive on desktop*/
+@media (min-width:1024px){
+    #membership-plans-container{
+        grid-template-columns: repeat(3,1fr);
+    }
+    #hero > h1 { font-size: 4rem; }
+    #hero span  { font-size: 4.5rem; }
+    #hero > p   { font-size: 1.5rem; }
+    #hero > a   { font-size: 2rem; padding: 1.5rem; border-radius: 2rem; }
+    section h2  { font-size: 2.5rem; }
+    .page-header h1 { font-size: 3.5rem; }
+    .page-header p  { font-size: 1.5rem; }
+    .gym-facility-card    { flex: 0 0 24rem; }
+    .membership-plan-card { flex: 0 0 25rem; }
+    .page-header { padding: 8rem 6rem; }
+    nav ul { gap: 2rem; flex-wrap: nowrap; }
+    main { padding: 5rem 5%; }
+    #featured-gym-facilities,
+    #membership-plans { padding: 2rem; margin-bottom: 8rem; }
+    .page-header { padding: 8rem 6rem; }
+    #registration-form { padding: 4rem; }
+    #registration-form fieldset,#contact-form fieldset { padding: 3rem; margin: 3rem 0; }
+    #contact-form textarea { width: 300px; height: 300px; }
+    #registration-form fieldset input,#contact-form input { width: 60%; }
+    nav { padding: 0 1.5rem; }
+    nav ul { gap: 2rem; flex-wrap: nowrap; }
+    nav li a { font-size: 1rem; }
+    #contact-us,#location,#opening-hours-table { font-size: 1.2rem; padding: 2rem; }
+    #plan-radio { gap: 2.5rem; }
+    #classes-table,#opening-hours-table { overflow-x: visible; display: revert; }
+    #classes-table table,#opening-hours-table table { font-size: 0.9em; }
+    #classes-table th,#classes-table td,#opening-hours-table th,#opening-hours-table td { padding: 12px 15px; }
+}
+
+/*responsive on tablet*/
+@media (min-width:768px)and(max-width:1023px){
+    #membership-plans-container{
+        grid-template-columns: repeat(2,1fr);
+    }
+    #hero > h1 { font-size: 3rem; }
+    #hero span  { font-size: 3.5rem; }
+    #hero > p   { font-size: 1.25rem; }
+    .gym-facility-card{ flex: 0 0 20rem; }
+    .membership-plan-card { flex: 0 0 21rem; }
+    section h2  { font-size: 2rem; }
+    .page-header h1 { font-size: 2.75rem; }
+    .page-header p  { font-size: 1.25rem; }
+    .page-header { padding: 6rem 4rem; }
+    #registration-form fieldset input,
+    #contact-form input { width: 60%; }
+    iframe { width: 450px; height: 550px; }
+    nav ul { gap: 1.25rem; }
+    main { padding: 3rem 5%; }
+    #featured-gym-facilities,
+    #membership-plans { padding: 1.5rem; margin-bottom: 5rem; }
+    .page-header { padding: 6rem 4rem; }
+    #registration-form { padding: 2.5rem; }
+    #registration-form fieldset,
+    #contact-form fieldset { padding: 2rem; margin: 2rem 0; }
+    nav ul { gap: 1.25rem; }
+    nav li a { font-size: 0.9rem; }
+    #contact-us,#location,#opening-hours-table { font-size: 1.1rem; padding: 1.5rem; }
+    #classes-table table,
+    #opening-hours-table table { font-size: 0.85em; }
+}

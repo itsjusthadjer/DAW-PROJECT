@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Membership-Grymus</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Syne:wght@400..800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!--NAVIGATION BAR-->
+
+    <nav>
+        <img src="" alt="Grymus Logo" height="150" width="100">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="classes.html">Classes</a></li>
+            <li><a href="membership.html" class="active">Membership</a></li>
+            <li><a href="trainers.html">Trainers</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header class="page-header">
+        <h1>Be A Member At <span>Grymus</span></h1>
+        <p>Explore Our Membership Plans and choose your path.</p>
+    </header>
+
+
+    <main>
+
+        <!--MEMBERSHIP PLAN CARDS SECTION-->
+
+        <section id="membership-plans">
+           <h2>Membership Plan Cards</h2>
+           <div id="membership-plans-container">
+               <div class="membership-plan">
+                  <h3><span>Bronze</span> /Monthly</h3>
+                  <p class="price">4500 DA</p>
+                  <h4>Plan Features</h4>
+                  <dl>   
+                      <dt>Cardio Deck,Strength & free Weights</dt>
+                      <dd>Free access to Cardio Deck,Strength & Free Weights.</dd>
+
+
+                      <dt>Locker Room Access</dt>
+                      <dd>Free access to Locker room & showers.</dd>
+
+
+                      <dt>A free assessment</dt>
+                      <dd>1 free fitness assessment(first month).</dd>
+
+
+                      <dt>Workout Program<dt>
+                      <dd>Basic beginner program.</dd>
+
+
+                      <dt>Wi-Fi</dt>
+                      <dd>Free Wi-Fi inside the gym.</dd>
+                  </dl>
+              </div>
+              <div class="membership-plan recommended" >
+                  <h3><span class="badge">Silver</span> /Quarterly</h3>
+                  <p class="price">12,000 DA</p>
+                  <h4>Plan Features</h4>
+                  <dl>   
+                      <dt>All Bronze access</dt>
+                      <dd>Benefit from all the features of the Bronze plan.</dd>
+
+
+                      <dt>Access to Pool</dt>
+                      <dd>Scheduled access to the pool.</dd>
+
+
+                      <dt>Sauna & Steam Rooms</dt>
+                      <dd>Free access to sauna room and steam rooms.</dd>
+
+
+                      <dt>Nutrition guide<dt>
+                      <dd>Basic meal recommendations to complement your workouts.</dd>
+
+                      <dt>Customized workout program</dt>
+                      <dd>Studied program updated monthly.</dd>
+                  </dl>
+              </div>
+              <div class="membership-plan">
+                  <h3><span>Gold</span> /Annual</h3>
+                  <p class="price">49,500 DA</p>
+                  <h4>Plan Features</h4>
+                  <dl>   
+                      <dt>All Silver Access</dt>
+                      <dd>Benefit from all the features of the Silver plan.</dd>
+
+                      <dt>Full Gym Access</dt>
+                      <dd>Free access to all the facilities provided by our gym.</dd>
+
+                      <dt>Wellness Access</dt>
+                      <dd>Free access to Spa & Jacuzzi.</dd>
+
+                      <dt>Health & Diet</dt>
+                      <dd>Personalized guidance to optimize your fitness and nutrition.</dd>
+
+                      <dt>VIP Locker & Recovery Zone</dt>
+                      <dd>Dedicated recovery area.</dd>
+                  </dl>
+              </div>
+           </div>
+       </section>
+       <!--REGISTRATION FORM-->
+       <section id="registration-form">
+           <h2>Register Now</h2>
+           <form>
+            <fieldset>
+                <legend>Personal Information</legend>
+                <label for="Full-Name">Full Name: </label>
+                <input type="text" placeholder="Your Full Name" id="Full-Name" name="fullname" required>
+                <label for="email">Email:</label>
+                <input type="email" placeholder="youremail@example.com" id="email" name="email" required>
+                <label for="phone">Phone: </label>
+                <input type="tel" placeholder="+213 000 000 000" id="phone" name="phone" required>
+                <label for="date-of-birth">Date of Birth: </label>
+                <input type="date" id="date-of-birth" name="dateofbirth" required>
+            </fieldset>
+            <fieldset >
+                <legend>Membership Plan</legend>
+                <div id="plan-radio">
+                    <label>
+                        <input type="radio" name="plan" value="bronze">Bronze
+                    </label>
+                    <label>
+                        <input type="radio" name="plan" value="silver">Silver
+                    </label>
+                    <label>
+                        <input type="radio" name="plan" value="gold">Gold
+                    </label>
+                </div>
+                
+            </fieldset>
+            <div id="terms-and-conditions">
+                <label for="agree">I agree to the <a href="terms-and-conditions.html">Terms and Conditions</a></label>
+                <input type="checkbox" id="agree" name="agree" required>
+                <button type="submit">Submit</button>
+            </div>
+           
+           </form>
+       </section>
+    </main>
+   <footer>
+        <div id="footer-columns">
+            <div class="footer-column">
+               <h3>Contact Info</h3>
+               <ul>
+                 <li><strong>Address:</strong> Grymus gym,Zone Industrielle Palma,Constantine,Algeria.</li>
+                 <li><strong>Phone:</strong> +213 000 111 223</li>
+                 <li><strong>Email:</strong> contact@grymus.com</li>
+                 <li><strong>Hours:</strong> Sunday - Thursday, 10:00 AM - 4:00 PM</li>
+               </ul>
+            </div>
+            <div class="footer-column">
+               <h3>Follow Us</h3>
+               <ul>
+                   <li><a href="">Facebook</a></li>
+                   <li><a href="">Instagram</a></li>
+                   <li><a href="">TikTok</a></li>
+               </ul>
+           </div>
+           <div class="footer-column">
+               <h3>Quick Links</h3>
+               <ul>
+                 <li><a href="contact.html#opening-hours-table">Opening Hours</a></li>
+               </ul>
+           </div>
+        </div>
+        <p>&copy; 2026 Grymus Gym ,All rights reserved.</p>
+   </footer>
+</body>
+</html>
