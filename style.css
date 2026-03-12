@@ -76,6 +76,14 @@ nav li a.active{
     border-bottom: 2px solid var(--accent);
 }
 
+
+nav img{
+    height: auto;
+    width: 150px;
+    padding: 1.5rem;
+}
+
+
 /*hero part*/
 
 #hero{
