@@ -185,7 +185,7 @@ h2+p{
 
 .gym-facility-card img{
     background-color: #1e2a31;
-    padding: 4rem;
+    padding: 3rem;
     border-radius: 2rem;
     text-align: center;
 }
@@ -232,10 +232,10 @@ h2+p{
 }
 
 .membership-plan-card{
-    flex: 0 0 100%;
+    flex: 0 0 90%;
     text-align: center;
     background: var(--primary);
-    padding: 4rem;
+    padding: 2rem;
     border-radius: 1.5rem;
     display: flex;
     flex-direction: column;
@@ -248,7 +248,7 @@ h2+p{
 
 .membership-plan-card:hover{
     box-shadow: inset 0 0 20px #b84a00d3;
-    transform: scale(1.02);
+    transform: scale(1.01);
 }
 
 .membership-plan-card h3{
@@ -423,7 +423,7 @@ footer{
 #classes-table table,#opening-hours-table table{
     border-collapse: collapse;
     margin: 25px 0;
-    font-size: 0.8em;
+    font-size: 1em;
     min-width: 400px;
     border-radius: 9px 9px 0 0;
     overflow: hidden;
@@ -436,8 +436,13 @@ footer{
     background-color: var(--primary);
     font-weight: 500;
 }
-#classes-table th,#classes-table td,#opening-hours-table th,#opening-hours-table td{
+#classes-table th,#classes-table td{
     padding: 8px 10px;
+    font-weight: 500;
+}
+
+#opening-hours-table th,#opening-hours-table td{
+    padding: 6px 8px;
     font-weight: 500;
 }
 
@@ -469,6 +474,7 @@ footer{
 
 .badge-adv{
   display: inline-block;
+  font-size: 0.8em;
   padding: 4px 8px;
   background-color: #b41111;
   color: white;
@@ -478,6 +484,7 @@ footer{
 
 .badge-beg{
   display: inline-block;
+  font-size: 0.8em;
   padding: 4px 8px;
   background-color: #0cb00c;
   color: white;
@@ -487,6 +494,7 @@ footer{
 
 .badge-int{
   display: inline-block;
+  font-size: 0.8em;
   padding: 4px 8px;
   background-color: #dc5517;
   color: white;
@@ -496,6 +504,7 @@ footer{
 
 .badge-all{
   display: inline-block;
+  font-size: 0.8em;
   padding: 4px 8px;
   background-color: #2828a9;
   color: white;
@@ -506,46 +515,52 @@ footer{
 /*trainers page part*/
 
 
-.trainers-cards-container {
-    display: flex;
-    gap: 1.5rem;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-top: 4rem;
-    margin-bottom: 2rem;
+.trainers-cards-container{
+   display: grid;
+   grid-template-columns: 1fr;
+   gap: 1.5rem;
+   margin: 2rem;
 }
 
-.trainer-card{
-    flex: 0 0 100%;
-    padding: 1.5rem;
+
+.trainer-card figure{
+    width: 100%;
+    padding: 2rem;
     border-radius: 2rem;
-    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
     background: var(--primary);
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    flex-direction: column;
-    margin-right: 2rem;
-    transform: scale(1);
     margin: 1rem;
     transition: all 0.3s ease;
 }
-.female:hover {
-    transform: scale(1.15);
+
+
+.female figure:hover {
+    transform: scale(1.01);
     box-shadow: 0 1rem 2rem rgba(65, 65, 65, 0.277);
     background: linear-gradient(135deg,var(--primary) 0%,#310d2e 75%, #6E0C32  100%);
 }
-.male:hover {
-    transform: scale(1.15);
+
+
+.male figure:hover {
+    transform: scale(1.01);
     box-shadow: 0 1rem 2rem rgba(65, 65, 65, 0.277);
-    background: linear-gradient(135deg,var(--primary) 0%,#13394A 80%, #1A4F66   100%);
+    background: linear-gradient(135deg,var(--primary) 0%,#18303b 50%, var(--secondary)   100%);
 }
-.trainer-card img{
-    border-radius:50%;
-    background-color: var(--bg);
-    padding: 30px ;
+
+
+
+.trainer-card figure img{
+    height: 100px;
+    width: 100px;
+    padding-top: 3rem;
     text-align: center;
-    display: flex;
-    margin-bottom: 1rem;
-    background-size: cover;
+    border-radius:50%;
+    background-color: #1e2a31;
+    text-align: center;
 }
 
 .trainer-card figcaption{
@@ -553,6 +568,14 @@ footer{
     color: var(--text);
     font-weight: 500;    
 
+}
+img[alt="trainer picture"]{
+    font-size: 0.5em;
+    text-align: center;
+    color: var(--accent);
+    font-weight: bold;
+    text-transform: uppercase;
+    
 }
 
 .trainer-card figcaption .title{
@@ -574,19 +597,15 @@ footer{
     display: block;
     text-align: center;
     margin-bottom: 1rem;
-    text-shadow: 0 0 5px var(--text);
+    text-shadow: 0 0 10px var(--text);
+    transition: all 0.3s ease;
 }
 
 .trainer-card figcaption a:hover{
-    text-decoration: none;
     color: var(--secondary);
-    font-family: "Oswald" , sans-serif;
-    font-size: 1.5rem;
-    display: block;
     text-align: center;
     margin-bottom: 1rem;
     text-shadow: 0 0 5px var(--secondary);
-    transition: all 0.3s ease;
 
 }
 #work-with-us address a{
@@ -619,11 +638,10 @@ footer{
     text-align: center;
     display: flex;
     flex-direction: column;
-    flex:0 0 26rem;
     align-items: center;
     justify-content: space-between;
     background-color: var(--primary);
-    padding: 4rem;
+    padding: 2rem;
     border-radius: 1.25rem;
     gap: 1rem;
     transition: all 0.3s ease;
@@ -631,7 +649,7 @@ footer{
 }
 
 .membership-plan:hover{
-    transform: scale(1.05);
+    transform: scale(1.01);
     background: linear-gradient(135deg,var(--primary) 0%,#102c3a 50%, #1c3f3c 75%,#dcf76368 100%);
 }
 
@@ -895,12 +913,19 @@ iframe:hover{
     box-shadow: 0 0 20px #dcf763cf;
     transform: scale(1.025);
 }
-#contact-us,#location,#opening-hours-table{
+#contact-us,#location{
     text-align: center;
     color: var(--text);
-    font-size: 1rem;
+    font-size: 1em;
     padding: 1rem;
 }
+
+#opening-hours-table{
+    font-size: 1em;
+    overflow-x: scroll;
+}
+
+
 #contact-us strong{
     color: var(--accent);
     font-family: 'oswald',sans-serif;
@@ -933,11 +958,14 @@ iframe:hover{
     .page-header p  { font-size: 1.5rem; }
     .gym-facility-card    { flex: 0 0 24rem; }
     .membership-plan-card { flex: 0 0 25rem; }
+    .membership-plan-card:hover{box-shadow: inset 0 0 20px #b84a00d3;transform: scale(1.02);}
     .page-header { padding: 8rem 6rem; }
     nav ul { gap: 2rem; flex-wrap: nowrap; }
     main { padding: 5rem 5%; }
     #featured-gym-facilities,
     #membership-plans { padding: 2rem; margin-bottom: 8rem; }
+    .membership-plan{padding: 4rem;}
+    .membership-plan:hover{transform: scale(1.05);background: linear-gradient(135deg,var(--primary) 0%,#102c3a 50%, #1c3f3c 75%,#dcf76368 100%);}
     .page-header { padding: 8rem 6rem; }
     #registration-form,#contact-form { padding: 4rem; }
     #registration-form fieldset,#contact-form fieldset { padding: 3rem; margin: 3rem 0; }
@@ -951,16 +979,12 @@ iframe:hover{
     #classes-table,#opening-hours-table { overflow-x: visible; display: revert; }
     #classes-table table,#opening-hours-table table { font-size: 0.9em; }
     #classes-table th,#classes-table td,#opening-hours-table th,#opening-hours-table td { padding: 12px 15px; }
-    .trainer-card {
-        flex: 0 0 20rem;
-        padding: 3rem;
-        margin: 3rem;
-        transform: scale(1.1);
-    }
-    .trainer-card img { padding: 75px; }
-    .trainer-card figcaption a,.trainer-card figcaption a:hover { font-size: 35px; }
     #contact-form{flex: 0 0 55%;}
+    .trainers-cards-container{grid-template-columns: repeat(3,1fr); justify-content: center; gap: 2rem;}
+    .trainer-card{height: 100%;}
+    .trainer-card,.trainer-card article,.trainer-card figure {height: 100%;}
 }
+
 
 /*responsive on tablet*/
 @media (min-width:768px)and(max-width:1023px){
@@ -992,12 +1016,5 @@ iframe:hover{
     #contact-us,#location,#opening-hours-table { font-size: 1.1rem; padding: 1.5rem; }
     #classes-table table,
     #opening-hours-table table { font-size: 0.85em; }
-    .trainer-card {
-        flex: 0 0 18rem;
-        padding: 2rem;
-        margin: 1.5rem;
-        transform: scale(1.05);
-    }
-    .trainer-card img { padding: 50px; }
-    .trainer-card figcaption a,.trainer-card figcaption a:hover { font-size: 1.75rem; }
+    .trainers-cards-container{grid-template-columns: repeat(2,1fr);}
 }
