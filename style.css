@@ -564,11 +564,12 @@ footer{
 
 
 .trainer-card figure img{
-    height: 250px;
-    width: 250px;
-    border-radius:50%;
+    width: 80%;       
+    max-width: 250px; 
+    aspect-ratio: 1/1; 
+    object-fit: cover;
+    border-radius: 50%;
     box-shadow: 0 0 20px #0c0d12;
-    
 }
 
 .trainer-card figcaption{
