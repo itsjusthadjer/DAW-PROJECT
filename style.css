@@ -413,7 +413,7 @@ footer{
 
  }
 
-#classes-table,#opening-hours-table{
+#classes-table{
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
     display: block;
@@ -532,10 +532,11 @@ footer{
     align-items: center;
     gap: 1rem;
     background: var(--primary);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.255);
     margin: 1rem;
     transition: all 0.3s ease;
 }
+
 
 
 .female figure:hover {
@@ -922,7 +923,9 @@ iframe:hover{
 
 #opening-hours-table{
     font-size: 1em;
-    overflow-x: scroll;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    display: block;
 }
 
 
