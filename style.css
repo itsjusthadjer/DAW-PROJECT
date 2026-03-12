@@ -895,10 +895,8 @@ input[type="checkbox"]:focus{
 
 #contact-form-and-info{
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: stretch;
-    gap: 3rem;
+    flex-direction: column;
+    gap: 1.5rem;
 }
 
 iframe{
@@ -921,11 +919,19 @@ iframe:hover{
     padding: 1rem;
 }
 
-#opening-hours-table{
-    font-size: 1em;
+#opening-hours-table {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
     display: block;
+    width: 90%;
+}
+
+#opening-hours-table table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 1rem;
+    min-width: 100%; 
+    width: 100%;
 }
 
 
@@ -948,7 +954,7 @@ iframe:hover{
 }
 
 /*responsive on desktop*/
-@media (min-width:1024px){
+@media (min-width: 1024px){
     #membership-plans-container{
         grid-template-columns: repeat(3,1fr);
     }
@@ -986,11 +992,12 @@ iframe:hover{
     .trainers-cards-container{grid-template-columns: repeat(3,1fr); justify-content: center; gap: 2rem;}
     .trainer-card{height: 100%;}
     .trainer-card,.trainer-card article,.trainer-card figure {height: 100%;}
+    #contact-form-and-info{flex-direction:row;flex-wrap:wrap;justify-content: center;align-items: stretch;gap: 3rem;}
 }
 
 
 /*responsive on tablet*/
-@media (min-width:768px)and(max-width:1023px){
+@media (min-width: 768px)and(max-width: 1023px){
     #membership-plans-container{
         grid-template-columns: repeat(2,1fr);
     }
