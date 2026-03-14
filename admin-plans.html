@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Plans-Grymus</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    
+    <header>
+        <h1>Admin Plans</h1>
+    </header>
+
+
+    <main>
+            <!--TABLE OF EXISTING PLANS-->
+                <section id="table-plans">
+                    <h2>Plans</h2>
+                    <table border="1">
+                        <thead>
+                            <tr>
+                               <th>Plan Name</th>
+                               <th>Price</th>
+                               <th>Duration</th>
+                               <th>Features</th>
+                               <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Gold</td>
+                                <td>49,500DA</td>
+                                <td>Annual</td>
+                                <td>
+                                    <ul>
+                                        <li>All Silver Access</li>
+                                        <li>Full Gym Access</li>
+                                        <li>Unlimited Pool Access</li>
+                                        <li>Wellness Access</li>
+                                        <li>Health & Diet Consultation</li>
+                                        <li>VIP locker & recovery zone</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <input type="button" value="delete">
+                                    <input type="button" value="Edit">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Silver</td>
+                                <td>12,000 DA</td>
+                                <td>Quarterly</td>
+                                <td>
+                                    <ul>
+                                        <li>All Bronze access</li>
+                                        <li>Access to Pool</li>
+                                        <li>Access to Sauna and Steam Rooms</li>
+                                        <li>Nutrition guide</li>
+                                        <li>Customized workout program</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <input type="button" value="delete">
+                                    <input type="button" value="Edit">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Bronze</td>
+                                <td>4500DA</td>
+                                <td>Monthly</td>
+                                <td>
+                                    <ul>
+                                        <li>Cardio Deck,Strength & free Weights</li>
+                                        <li>Locker Room Access</li>
+                                        <li>A free assessment</li>
+                                        <li>Workout Program</li>
+                                        <li>Wi-Fi</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <input type="button" value="delete">
+                                    <input type="button" value="Edit">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </section>
+                   <section id="admin-log-in-form">
+                        <h2>Add New Plan</h2>
+                        <fieldset>
+                            <legend>Plan Details</legend>
+                            <form>
+                                <label for="plan-name">Plan Name:</label>
+                                <input type="text" id="plan-name" placeholder="The plan name" name="username" required>
+
+                                <label for="Price">Price:</label>
+                                <input type="number" id="Price" name="Price" placeholder="Price in DA" required>
+                                
+                                <label for="Duration">Duration:</label>
+                                <input type="text" id="Duration" name="Price" placeholder="Duration" required>
+
+                                <label for="Features">Features:</label>
+                                <input type="text" id="Features" name="Features" placeholder="Features" required>
+
+                                <button type="submit">Submit</button>
+
+                            </form>
+                        
+                        </fieldset>
+                        <a href="../index.html">Go back to the main site</a>
+                    </section>
+
+    </main>
+
+        <!--FOOTER-->
+    <footer>
+        <p>&copy; 2026 Grymus Gym ,All rights reserved.</p>
+    </footer>
+
+
+</body>
+</html>

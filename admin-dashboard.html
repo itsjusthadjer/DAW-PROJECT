@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard-Grymus</title>
+    <link rel="stylesheet" href="admin.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Syne:wght@400..800&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <!--SIDE BAR NAVIGATION-->
+   <aside>
+      <nav id="sidebar-nav">
+        <img src="imgs-admin/logo.png" alt="">
+        <ul>
+            <li><a href="">Members</a></li>
+            <li><a href="">Classes</a></li>
+            <li><a href="">Subscriptions</a></li>
+            <li><a href="">Trainers</a></li>
+            <li><a href="">Orders</a></li>
+        </ul>
+      </nav>
+   </aside>
+    
+
+   <main>
+    <!--SUMMARY STATS SECTION-->
+    <section id="summary-stats">
+        <h2>Summary Stats</h2>
+        <div id="stat-cards-container">
+           <div class="stat-card total-members">
+               <h3>Total Members</h3>
+               <p>51</p>
+           </div>
+           <div class="stat-card active-subs">
+               <h3>Active Subscriptions</h3>
+               <p>21</p>
+           </div>
+           <div class="stat-card classes-today">
+               <h3>Classes Today</h3>
+               <div id="today-classes-container">
+                   <div class="today-class">
+                      <h4>Cardio</h4>
+                       <p class="level-badge">Beginner-Intermidiate</p>
+                  </div>
+                  <div class="today-class">
+                      <h4>Strength And Free Weights</h4>
+                      <p class="level-badge">Advanced</p>
+                  </div>
+                  <div class="today-class">
+                      <h4>Water Aerobics</h4>
+                      <p class="level-badge">All levels</p>
+                  </div>
+                  <div class="today-class">
+                      <h4>Swimming Lessons</h4>
+                      <p class="level-badge">All levels</p>
+                  </div>
+               </div>
+           </div>
+           <div class="stat-card revenue">
+               <h3>Revenue This Month</h3>
+               <p>425,870 DA</p>
+           </div>
+        </div>
+    </section>
+    <!--RECECENT ACTIVITY SECTION-->
+    <section id="recent-activity">
+        <h2>Recent Activity</h2>
+        <table border="1">
+            <caption>Activity overview</caption>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Date</th>
+                    <th>Plan</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Mohamed Amine</td>
+                    <td>2026-03-04</td>
+                    <td>Silver</td>
+                </tr>
+                <tr>
+                    <td>Sarah Benali</td>
+                    <td>2026-03-01</td>
+                    <td>Bronze</td>
+                </tr>
+                <tr>
+                    <td>Youcef Bensalem</td>
+                    <td>2026-02-28</td>
+                    <td>Silver</td>
+                </tr>
+                <tr>
+                    <td>amir Allouche</td>
+                    <td>2026-02-20</td>
+                    <td>Gold</td>
+                </tr>
+                <tr>
+                    <td>Yasmine Benghalem</td>
+                    <td>2026-02-18</td>
+                    <td>Silver</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+   </main>
+   
+   <footer>
+    <p>&copy; 2026 Grymus Gym Admin Panel . Version 1.0</p>
+   </footer>
+    
+   
+
+</body>
+</html>
