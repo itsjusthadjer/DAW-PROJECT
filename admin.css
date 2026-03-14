@@ -299,6 +299,18 @@ footer{
     text-align: center;
 }
 
+/*tablet*/
+
+@media (min-width: 768px){
+    #stat-cards-container{
+        grid-template-columns: repeat(2,1fr);
+        align-items: flex-start;
+    }
+}
+
+
+/*desktop*/
+
 @media(min-width: 1024px){
     body{
         display: flex;
@@ -342,3 +354,4 @@ footer{
     }
 
 }
+
