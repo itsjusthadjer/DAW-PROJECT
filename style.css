@@ -34,12 +34,12 @@ nav{
     z-index: 1000;
     padding: 0 1rem;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    flex-direction: column;
     background-color: var(--primary);
     align-items: center;
     box-shadow: 0 2px 7px rgba(0, 0, 0, 0.504);
     max-width: 100%;
+    padding: 0 0 1.5rem 0;
 }
 
 nav ul{
@@ -993,7 +993,7 @@ iframe:hover{
     #registration-form fieldset,#contact-form fieldset { padding: 3rem; margin: 3rem 0; }
     #contact-form textarea { width: 300px; height: 300px; }
     #registration-form fieldset input,#contact-form input { width: 60%; }
-    nav { padding: 0 1.5rem; }
+    nav {  padding: 0 0 1.5rem 0; }
     nav ul { gap: 2rem; flex-wrap: nowrap; }
     nav li a { font-size: 1rem; }
     #contact-us,#location,#opening-hours-table { font-size: 1.2rem; padding: 2rem; }
