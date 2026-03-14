@@ -299,6 +299,214 @@ footer{
     text-align: center;
 }
 
+
+
+
+/*admin log in*/
+
+#admin-log-in-form legend{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--secondary);
+    padding: 10 10 px;
+}
+
+#login-body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.admin-main{
+    text-align: center;
+    padding: 3rem 2rem;
+    margin: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+    width: 70%;
+    height: 60vh;
+}
+
+#admin-log-in-form fieldset form{
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    padding: 2rem;
+}
+
+#admin-log-in-form fieldset{
+   margin: 2rem auto;
+   padding: 3.5rem;
+   border: 3px solid;
+   border-style: dashed;
+   border-radius: 1rem;
+   background-color:var(--primary);
+   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+   border-color: #00090c;
+}
+
+#admin-log-in-form button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    border: 2px solid #00090c;
+    border-radius: 8px;
+    background-color: var(--primary);
+    color: var(--text);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#admin-log-in-form button:active{
+    opacity: 0.1;
+}
+
+#admin-log-in-form input{
+    width: 100%;
+    height: 30px;
+    border: 2px solid var(--accent);
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
+#admin-log-in-form input:focus{
+    background-color:#f6aa1c3c;
+}
+
+#admin-log-in-form input[type="checkbox"]{
+    height: 15px;
+    width: 15px;
+    border-radius: 2rem;
+}
+
+
+
+#admin-log-in-form label{
+    font-weight: bold;
+    padding: 0.2rem;
+}
+
+
+
+/* admin plans */
+
+
+#plans {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+#plans table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 1em;
+    width: 100%;
+    border-radius: 9px 9px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px #3a3c45b1;
+    transition: all 0.3s ease;
+    table-layout: fixed;
+}
+
+#plans th {
+    background-color: #0000002f;
+    font-family: "Oswald", sans-serif;
+}
+
+.plan-main {
+    margin: 4rem;
+    margin-top: 0;
+}
+
+#plans tr{
+    color: var(--accent);
+    background-color: var(--primary);
+    font-weight: 500;
+    
+}
+#plans th,#plans td{
+    padding: 8px 15px;
+    font-weight: 400;
+    border: 1px solid var(--accent);
+    
+}
+
+#plans td{
+    color: var(--text);
+    font-weight: 500;
+
+}
+
+#plans tbody tr:hover{
+    box-shadow:0 0 20px #3a3c45b1;
+    transition: all 0.3s ease;
+    
+}
+
+#plans li{
+    list-style: inside;
+}
+
+.action-buttons input[type="button"] {
+    padding: 0.5rem 1rem; 
+    font-size: 1rem;
+    border: none;
+    border-radius: 1rem;
+    cursor: pointer;
+    margin-right: 0.5rem; 
+}
+
+.action-buttons input[type="button"][value="delete"] {
+    background-color:var(--bg);
+    color: white;
+}
+
+.action-buttons input[type="button"][value="delete"]:hover {
+    background-color: #c03a2ba2;
+}
+
+.action-buttons input[type="button"][value="Edit"] {
+   background-color:var(--bg);
+    color: white;
+}
+
+.action-buttons input[type="button"][value="Edit"]:hover {
+    background-color: #217dbb78;
+}
+
+
+
+#plans td:nth-child(4) { 
+    min-width: 200px;
+}
+
+#plans td:nth-child(5) { 
+    min-width: 120px;
+}
+
+.main-site {
+    color: var(--text);
+    font-family: "Oswald", sans-serif;
+    text-decoration: none;
+    font-size: large;
+    transition: all 0.3s ease;
+}
+
+.main-site:hover{
+    color: var(--secondary);
+    text-shadow:  
+     1px 1px 2px #B84900,
+     0 0 5px #dcf763;
+    
+}
+
+
+
+
+
+
 /*tablet*/
 
 @media (min-width: 768px){
