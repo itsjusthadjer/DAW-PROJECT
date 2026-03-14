@@ -993,7 +993,7 @@ iframe:hover{
     #registration-form fieldset,#contact-form fieldset { padding: 3rem; margin: 3rem 0; }
     #contact-form textarea { width: 300px; height: 300px; }
     #registration-form fieldset input,#contact-form input { width: 60%; }
-    nav {  padding: 0 0 1.5rem 0; }
+    nav { flex-direction: row;flex-wrap: nowrap;justify-content: space-between;align-items: center; padding: 0 1rem 0.5rem 1rem; }
     nav ul { gap: 2rem; flex-wrap: nowrap; }
     nav li a { font-size: 1rem; }
     #contact-us,#location,#opening-hours-table { font-size: 1.2rem; padding: 2rem; }
