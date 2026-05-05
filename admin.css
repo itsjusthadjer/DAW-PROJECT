@@ -10,6 +10,7 @@ body{
     font-family: "Inter",sans-serif;
     line-height: 1.6;
     background-color: var(--bg);
+    margin: 0;
 
 }
 
@@ -111,19 +112,19 @@ main{
     letter-spacing: -0.5px;
 }
 
-.total-members h3,.classes-today h3{
+.total-members h3,.classes-today h3 ,.classesPerWeek h3{
     color: var(--accent);
 }
 
-.total-members,.classes-today{
+.total-members,.classes-today,.classesPerWeek{
     border-top: 8px solid var(--accent);
 }
 
-.active-subs h3,.revenue h3{
+.active-subs h3,.revenue h3,.popularPlan h3{
     color: var(--primary);
 }
 
-.active-subs,.revenue{
+.active-subs,.revenue,.popularPlan{
     border-top: 8px solid var(--primary);
 }
 
@@ -304,6 +305,21 @@ footer{
 
 /*admin log in*/
 
+.admin-main header{
+    padding: 1rem;
+    color: var(--secondary);
+    font-size: 4rem;
+    font-weight: 800;
+    text-shadow: 0 0 5px var(--secondary);
+
+}
+
+#admin-log-in-form a{
+    padding-bottom: 3rem;
+}
+
+
+
 #admin-log-in-form legend{
     font-size: 1.5rem;
     font-weight: bold;
@@ -329,14 +345,14 @@ footer{
     height: 60vh;
 }
 
-#admin-log-in-form fieldset form{
+#admin-log-in-form fieldset form,#plan-details fieldset  form{
     display: flex;
     flex-direction: column;
     gap: 0.3rem;
     padding: 2rem;
 }
 
-#admin-log-in-form fieldset{
+#admin-log-in-form fieldset,#plan-details fieldset{
    margin: 2rem auto;
    padding: 3.5rem;
    border: 3px solid;
@@ -347,7 +363,7 @@ footer{
    border-color: #00090c;
 }
 
-#admin-log-in-form button {
+#admin-log-in-form button,#plan-details button{
     padding: 10px 20px;
     font-size: 1rem;
     font-weight: 600;
@@ -359,26 +375,50 @@ footer{
     transition: all 0.3s ease;
 }
 
-#admin-log-in-form button:active{
-    opacity: 0.1;
+#admin-log-in-form legend,#plan-details legend{
+   font-size: 1.5rem;
+   font-weight: 600;
+   color: var(--secondary);
+   padding: 0.75rem 0.75rem;
+   text-transform: uppercase;
 }
 
-#admin-log-in-form input{
+#admin-log-in-form input,#plan-details input{
     width: 100%;
     height: 30px;
     border: 2px solid var(--accent);
     border-radius: 1rem;
-    padding: 1rem;
+    padding: 1.25rem;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
 }
+
+
+#admin-log-in-form input:focus,#plan-details :focus{
+   background-color: #e05b035a;
+}
+
+
+
+
+
+#admin-log-in-form label,#plan-details label{
+    color: var(--secondary);
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-right: 0.75rem;
+}
+
+
 
 #admin-log-in-form input:focus{
     background-color:#f6aa1c3c;
 }
 
 #admin-log-in-form input[type="checkbox"]{
+    accent-color: var(--accent);
     height: 15px;
     width: 15px;
-    border-radius: 2rem;
 }
 
 
@@ -392,27 +432,50 @@ footer{
 
 /* admin plans */
 
-
-#plans {
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
+#members-section {
+    width: 100%;
 }
 
-#plans table {
-    border-collapse: collapse;
-    margin: 25px 0;
-    font-size: 1em;
+#plans,#members-table{
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    display: block;
+    margin: 0 auto;
+    width: 90%;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 1rem;
     width: 100%;
     border-radius: 9px 9px 0 0;
-    overflow: hidden;
     box-shadow: 0 0 20px #3a3c45b1;
     transition: all 0.3s ease;
     table-layout: fixed;
 }
 
-#plans th {
+
+section #members-table{
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    display: block;
+}
+
+
+
+#members-table{
+    display: table;
+    width: 100%;
+}
+
+
+main{
+    margin-right: 0;
+   
+}
+
+#plans>table>th {
     background-color: #0000002f;
     font-family: "Oswald", sans-serif;
+    border-radius: 1rem;
 }
 
 .plan-main {
@@ -420,22 +483,26 @@ footer{
     margin-top: 0;
 }
 
-#plans tr{
+#plans tr,#members-table tr{
     color: var(--accent);
     background-color: var(--primary);
     font-weight: 500;
     
+    
 }
-#plans th,#plans td{
+#plans th,#plans td,#members-table th,#members-table td{
     padding: 8px 15px;
-    font-weight: 400;
-    border: 1px solid var(--accent);
+    font-weight: 800;
+    font-size: 1.1rem;
+    border:none;
+    margin: 0;
     
 }
 
-#plans td{
+#plans td,#members-table td{
     color: var(--text);
-    font-weight: 500;
+    font-weight: 800;
+   
 
 }
 
@@ -445,8 +512,39 @@ footer{
     
 }
 
-#plans li{
-    list-style: inside;
+
+
+
+
+
+
+
+#members-table th:nth-child(1) { width: 5%; }   /* ID */
+#members-table th:nth-child(2) { width: 20%; }  /* Name */
+#members-table th:nth-child(3) { width: 25%; }  /* Email */
+#members-table th:nth-child(4) { width: 12%; }  /* Phone */
+#members-table th:nth-child(5) { width: 10%; }  /* Plan */
+#members-table th:nth-child(6) { width: 13%; }  /* Join Date */
+#members-table th:nth-child(7) { width: 15%; }  /* Actions */
+
+
+
+
+
+
+
+
+
+header h1{
+    padding: 2rem;
+    color: var(--secondary);
+    font-weight: 800;
+    text-align: center;
+}
+
+
+#plans ul{
+    list-style: none;
 }
 
 .action-buttons input[type="button"] {
@@ -502,6 +600,526 @@ footer{
     
 }
 
+/*js*/
+
+#members-section{
+    margin: 1.5rem auto;
+    max-width: 1200px;
+
+}
+
+
+
+#add-member-form h3,#edit-modal h3{
+    font-size: 1.2rem;
+    color: var(--accent);
+    text-transform: uppercase;
+}
+
+#add-member-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    margin: 0;
+    background-color: var(--text);
+    margin: 3rem auto;
+    padding: 3.5rem;
+    border-radius: 2rem;
+    box-shadow: 0 0 20px #00090c72;
+}
+
+#add-member-form input{
+    padding: 0.9rem;
+    border-radius: 1rem;
+    border: none;
+    text-align: center;
+    width: 60%;
+}
+
+
+#add-member-form input:focus,#members-controls input:focus{
+    background-color: var(--primary);
+}
+
+#add-member-form select{
+    padding: 0.8rem 1.1rem;
+    width: 40%;
+    background-color: var(--primary);
+    border: none;
+    border-radius: 1rem;
+    color: var(--secondary);
+    font-weight: 800;
+    text-align: center;
+
+}
+
+#add-member-form button{
+    padding: 0.8rem 1.2rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    border: none;
+    background-color: var(--accent);
+    color: var(--secondary);
+    font-size: 1.2rem;
+    font-weight: 800;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.244);
+    transition: all 0.3s ease;
+
+}
+
+#add-member-form button:hover{
+    background-color:#b27b15;
+    box-shadow: 0 0 10px var(--accent);
+}
+
+
+#members-controls{
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+#members-controls input{
+    padding: 0.8rem;
+    border-radius: 1rem;
+    text-align: center;
+    border: none;
+}
+
+
+#members-controls select{
+    padding: 0.6rem;
+    background-color: var(--primary);
+    border-radius: 1rem;
+    color: var(--secondary);
+    font-weight: 700;
+    border: none;
+    text-align: center;
+}
+
+#members-controls p{
+    color: var(--secondary);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+
+#members-controls p span{
+    color: var(--accent);
+    font-size: 1.3rem;
+}
+
+#edit-modal{
+    padding: 2rem;
+    background-color: var(--secondary);
+    border-radius: 2rem;
+}
+
+
+.modal-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
+}
+
+.modal-content input{
+    padding: 0.8rem;
+    border-radius: 0.5rem;
+    border: none;
+    color: var(--accent);
+    background-color: var(--text);
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 700;
+    width: 80%;
+}
+
+.modal-content input:focus{
+    background-color: var(--accent);
+    color: var(--text);
+}
+
+
+.modal-content select{
+    padding: 0.9rem;
+    border: none;
+    font-size: 1rem;
+    border-radius: 1.5rem;
+    background-color: var(--accent);
+    font-weight: 700;
+    text-align: center;
+}
+
+#save-edit-btn,#cancel-edit-btn{
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+    background-color: var(--accent);
+    color: var(--secondary);
+    border: none;
+    border-radius: 1rem;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+#cancel-edit-btn{
+    background-color: var(--text);
+    color: var(--secondary);
+}
+
+#edit-member-table,#delete-member-table{
+    padding: 0.3rem 0.8rem;
+    margin: 0.5rem auto;
+    border: none;
+    font-weight: 700;
+    border-radius: 1.5rem;
+    font-size: 1rem;
+    background-color: var(--accent);
+}
+
+#delete-member-table{
+    background-color: var(--bg);
+    color: var(--secondary);
+}
+
+
+
+
+#edit-modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #00090cb7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+#edit-modal .modal-content{
+    background-color: var(--text);
+    padding: 3rem;
+    border-radius: 2rem;
+    box-shadow: 0 0 30px #00000080;
+    width: 90%;
+    max-width: 500px;
+}
+
+.hidden{
+    display: none !important;
+}
+
+
+
+
+
+
+
+
+/* admin plans */
+
+#table-plans h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    color: white;
+    font-weight: 700;
+}
+
+header h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    color: white;
+    font-weight: 800;
+}
+
+#plans table,#classes-admin-table table {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    width: 100%;
+}
+
+
+#plans,#classes-admin-table{
+    border-collapse: collapse;
+    margin: 0;
+    font-size: 0.85em;
+    width: 100%;
+    overflow: hidden;
+    box-shadow: 0 0 20px #3a3c45b1;
+    transition: all 0.3s ease;
+    table-layout: auto;
+}
+
+#plans th,#classes-admin-table th {
+    background-color: #0000002f;
+    font-family: "Oswald", sans-serif;
+}
+
+.plan-main {
+    margin: 4rem 1rem;
+}
+
+#plans tr,#classes-admin-table tr{
+    color: var(--accent);
+    background-color: var(--primary);
+    font-weight: 500;
+    
+}
+#plans th,#plans td,#classes-admin-table th,#classes-admin-table td{
+    padding: 8px 15px;
+    font-weight: 400;
+    border: 1px solid #420d55;
+    
+}
+
+#plans td,#classes-admin-table td{
+    color: var(--text);
+    font-weight: 500;
+
+}
+
+#plans tbody tr:hover,#classes-admin-table tbody tr:hover{
+    box-shadow:0 0 20px #3a3c45b1;
+    transition: all 0.3s ease;
+    
+}
+
+#plans li{
+    list-style: none;
+}
+
+.action-buttons input[type="button"] {
+    padding: 0.5rem 1rem; 
+    font-size: 1rem;
+    border: none;
+    border-radius: 1rem;
+    cursor: pointer;
+    margin-right: 0.5rem; 
+}
+
+.action-buttons input[type="button"][value="delete"] {
+    background-color:var(--bg);
+    color: white;
+    margin: 1rem;
+    align-content: center;
+}
+
+.action-buttons input[type="button"][value="delete"]:hover {
+    background-color: #c03a2ba2;
+}
+
+.action-buttons input[type="button"][value="Edit"] {
+   background-color:var(--bg);
+    color: white;
+    margin: 1rem;
+    align-content: center;
+}
+
+.action-buttons input[type="button"][value="Edit"]:hover {
+    background-color: #217dbb78;
+}
+
+#plans td:nth-child(4) { 
+    min-width: 200px;
+}
+
+#plans td:nth-child(5) { 
+    min-width: 120px;
+}
+
+#admin-classes{
+    overflow-x: auto;
+}
+
+#classFormMessage{
+    min-height: 1.5rem;
+    text-align: center;
+    font-weight: 700;
+}
+
+.form-error{
+    color: #8a1010;
+}
+
+.form-success{
+    color: var(--secondary);
+}
+
+.form-swipe{
+    animation: swipe-to-edit 0.55s ease;
+}
+
+
+
+#plan-details legend,#class-details legend{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--secondary);
+    padding: 10 10 px;
+}
+
+#plan-details,#class-details{
+    align-self: center;
+    margin-top: 100px;
+}
+
+
+
+#plan-details fieldset,#class-details fieldset{
+   width: 400px;
+   margin: 2rem auto;
+   padding: 2rem;
+   border: 3px;
+   border-style: dashed;
+   border-radius: 1rem;
+   background-color:var(--primary);
+   display: flex;
+   flex-direction: column;
+   gap: 1rem;
+   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+   border-color: var(--text);
+}
+
+#plan-details button,#class-details button{
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    border: 2px solid  ;
+    border-radius: 10px;
+    background-color: var(--secondary);
+    color: var(--primary);
+    cursor: pointer;
+}
+
+#plan-details,#class-details{
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+#plan-details label,#class-details label{
+    color: var(--secondary);
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 10px;
+}
+#plan-details input,#class-details input,#class-details select{
+    border: 3px dashed var(--primary) ;
+    padding: 10px;
+    outline:none;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+    font-size: large;
+
+}
+
+
+#plan-details:focus,#class-details input:focus,#class-details select:focus{
+    border: 3px dashed var(--text);
+}
+
+input[type="checkbox"]{
+  accent-color: var(--accent);
+  width: 18px;
+  height: 18px;
+}
+.form-group{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+
+@keyframes swipe-to-edit{
+    from{
+        transform: translateX(28px);
+    }
+    to{
+        transform: translateX(0);
+    }
+}
+
+.main-site {
+    display: block;
+    width: fit-content;
+    margin: 2rem auto 0;
+    color: var(--text);
+    font-family: "Oswald", sans-serif;
+    text-decoration: none;
+    font-size: large;
+    transition: all 0.3s ease;
+}
+
+.main-site:hover{
+    color: var(--secondary);
+    text-shadow:  
+     1px 1px 2px #B84900,
+     0 0 5px #dcf763;
+    
+}
+
+
+
+
+
+#summary-stats,#recent-activity,#plan-chart-section{
+    padding: 2rem;
+}
+
+#planChart{
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    gap: 1.25rem;
+    min-height: 220px;
+    width: min(720px, 100%);
+    margin: 1rem auto;
+    padding: 1.5rem;
+    background-color: var(--secondary);
+    border-radius: 1rem;
+    box-shadow: 0 2px 5px #00090c75;
+}
+
+.plan-bar-wrap{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+    height: 170px;
+    min-width: 70px;
+    gap: 0.5rem;
+}
+
+.plan-bar{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    width: 48px;
+    min-height: 18px;
+    padding-top: 0.35rem;
+    background-color: var(--primary);
+    border-radius: 0.75rem 0.75rem 0 0;
+    color: var(--secondary);
+    font-weight: 800;
+}
+
+.plan-bar-wrap p{
+    color: var(--text);
+    font-weight: 800;
+    text-transform: capitalize;
+}
 
 
 
@@ -547,6 +1165,21 @@ footer{
         margin-left: 250px;
     }
 
+
+
+    body.admin-layout main{
+        margin-left: 250px;
+        flex: 1;
+        width: calc(100% - 250px);
+        padding: 2rem 4rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+
+
     #sidebar-nav ul{
         display: flex;
         flex-direction: column;
@@ -560,6 +1193,9 @@ footer{
     footer{
         margin-left: 800px;
     }
+
+
+    
 
 }
 

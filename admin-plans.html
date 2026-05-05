@@ -17,118 +17,72 @@
 
 
     <main class="plan-main">
-            <!--TABLE OF EXISTING PLANS-->
-                <section id="table-plans">
-                    <h2>Plans</h2>
-                    <table id="plans">
+                <section id="admin-classes">
+                    <h2>Class Timetable</h2>
+                    <table id="classes-admin-table">
                         <thead>
                             <tr>
-                               <th>Plan Name</th>
-                               <th>Price</th>
-                               <th>Duration</th>
-                               <th>Features</th>
-                               <th>Actions</th>
+                                <th>Class Name</th>
+                                <th>Trainer</th>
+                                <th>Day</th>
+                                <th>Time</th>
+                                <th>Duration</th>
+                                <th>Difficulty</th>
+                                <th>Capacity</th>
+                                <th>Actions</th>
                             </tr>
                         </thead>
-                        <tbody>
-                            <tr>
-                                <td>Gold</td>
-                                <td>49,500DA</td>
-                                <td>Annual</td>
-                                <td>
-                                    <ul>
-                                        <li>All Silver Access</li>
-                                        <li>Full Gym Access</li>
-                                        <li>Unlimited Pool Access</li>
-                                        <li>Wellness Access</li>
-                                        <li>Health & Diet Consultation</li>
-                                        <li>VIP locker & recovery zone</li>
-                                    </ul>
-                                </td>
-                                <td>
-                                    <div class="action-buttons">
-                                        <input type="button" value="delete">
-                                        <input type="button" value="Edit">
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Silver</td>
-                                <td>12,000 DA</td>
-                                <td>Quarterly</td>
-                                <td>
-                                    <ul>
-                                        <li>All Bronze access</li>
-                                        <li>Access to Pool</li>
-                                        <li>Access to Sauna and Steam Rooms</li>
-                                        <li>Nutrition guide</li>
-                                        <li>Customized workout program</li>
-                                    </ul>
-                                </td>
-                                <td>
-                                    <div class="action-buttons">
-                                        <input type="button" value="delete">
-                                        <input type="button" value="Edit">
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Bronze</td>
-                                <td>4500DA</td>
-                                <td>Monthly</td>
-                                <td>
-                                    <ul>
-                                        <li>Cardio Deck,Strength & free Weights</li>
-                                        <li>Locker Room Access</li>
-                                        <li>A free assessment</li>
-                                        <li>Workout Program</li>
-                                        <li>Wi-Fi</li>
-                                    </ul>
-                                </td>
-                                <td>
-                                   <div class="action-buttons">
-                                        <input type="button" value="delete">
-                                        <input type="button" value="Edit">
-                                    </div>
-                                </td>
-                            </tr>
-                        </tbody>
+                        <tbody id="adminClassesBody"></tbody>
                     </table>
-
                 </section>
-                   <section id="plan-details">
-                        <h2>Add New Plan</h2>
-                        <fieldset>
-                            <legend>Plan Details</legend>
-                            <form>
-                                <div class="form-group">
-                                    <label for="plan-name">Plan Name:</label>
-                                    <input type="text" id="plan-name" placeholder="The plan name" name="username" required>
-                                </div>
-                                
-                                
-                                <div class="form-group">    
-                                    <label for="Price">Price:</label>
-                                    <input type="number" id="Price" name="Price" placeholder="Price in DA" required>
-                                </div>
-                                
-                                <div class="form-group">
-                                    <label for="Duration">Duration:</label>
-                                    <input type="text" id="Duration" name="Price" placeholder="Duration" required>
-                                </div>
 
-                                <div class="form-group">
-                                    <label for="Features">Features:</label>
-                                    <input type="text" id="Features" name="Features" placeholder="Features" required>
-                                </div>
+                <section id="class-details">
+                    <h2 id="classFormTitle">Add New Class</h2>
+                    <p id="classFormMessage" aria-live="polite"></p>
+                    <fieldset>
+                        <legend>Class Details</legend>
+                        <form id="classForm">
+                            <input type="hidden" id="editIndex">
+                            <div class="form-group">
+                                <label for="className">Class Name:</label>
+                                <input type="text" id="className" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="classTrainer">Trainer:</label>
+                                <input type="text" id="classTrainer" placeholder="Trainer name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="classDay">Day:</label>
+                                <input type="text" id="classDay" placeholder="Example: Monday" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="classTime">Time:</label>
+                                <input type="text" id="classTime" placeholder="Example: 6PM-7PM" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="classDuration">Duration:</label>
+                                <input type="text" id="classDuration" placeholder="Example: 1h" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="classDifficulty">Difficulty:</label>
+                                <select id="classDifficulty" required>
+                                    <option value="beginner">Beginner</option>
+                                    <option value="intermediate">Intermediate</option>
+                                    <option value="advanced">Advanced</option>
+                                    <option value="all">All levels</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="classCapacity">Capacity:</label>
+                                <input type="number" id="classCapacity" min="1" required>
+                            </div>
+                            <button type="submit">Save Class</button>
+                            <button type="button" id="cancelEdit" hidden>Cancel Edit</button>
+                        </form>
+                    </fieldset>
+                </section>
 
-                                <button type="submit">Submit</button>
-
-                            </form>
-                        
-                        </fieldset>
-                        <a class="main-site" href="../index.html">Go back to the main site</a>
-                    </section>
+                <a class="main-site" href="../index.html">Go back to the main site</a>
 
     </main>
 
@@ -137,6 +91,7 @@
         <p>&copy; 2026 Grymus Gym ,All rights reserved.</p>
     </footer>
 
+    <script src="admin-plans.js"></script>
 
 </body>
 </html>

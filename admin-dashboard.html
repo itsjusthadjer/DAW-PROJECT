@@ -16,8 +16,9 @@
       <nav id="sidebar-nav">
         <img src="imgs-admin/logo.png" alt="">
         <ul>
-            <li><a href="">Members</a></li>
-            <li><a href="">Classes</a></li>
+            <li><a href="admin-dashboard.html">Home</a></li>
+            <li><a href="member-management.html">Members</a></li>
+            <li><a href="admin-plans.html">Classes</a></li>
             <li><a href="">Subscriptions</a></li>
             <li><a href="">Trainers</a></li>
             <li><a href="">Orders</a></li>
@@ -33,13 +34,26 @@
         <div id="stat-cards-container">
            <div class="stat-card total-members">
                <h3>Total Members</h3>
-               <p>51</p>
+               <p id="dashboard-member-count">51</p>
            </div>
            <div class="stat-card active-subs">
                <h3>Active Subscriptions</h3>
-               <p>21</p>
+               <p id="activeSubscriptions">21</p>
            </div>
-           <div class="stat-card classes-today">
+
+           <div class="stat-card revenue">
+               <h3>Revenue This Month</h3>
+               <p>425,870 DA</p>
+           </div>
+           <div class="stat-card classesPerWeek">
+              <h3>Classes Per Week</h3>
+              <p id="classesPerWeek">—</p>
+          </div>
+          <div class="stat-card popularPlan">
+              <h3>Most Popular Plan</h3>
+               <p id="popularPlan">—</p>
+          </div>
+                     <div class="stat-card classes-today">
                <h3>Classes Today</h3>
                <div id="today-classes-container">
                    <div class="today-class">
@@ -60,12 +74,16 @@
                   </div>
                </div>
            </div>
-           <div class="stat-card revenue">
-               <h3>Revenue This Month</h3>
-               <p>425,870 DA</p>
-           </div>
+
+
         </div>
+        
     </section>
+
+
+    <div id="planChart"></div> 
+
+
     <!--RECECENT ACTIVITY SECTION-->
     <section id="recent-activity">
         <h2>Recent Activity</h2>
@@ -107,6 +125,8 @@
             </tbody>
         </table>
     </section>
+
+
    </main>
    
    <footer>
@@ -114,6 +134,6 @@
    </footer>
     
    
-
+   <script src="admin.js"></script>
 </body>
 </html>

@@ -89,13 +89,12 @@ nav img{
 
 #hero{
     height: 90vh;
-    background-attachment: fixed;
     padding: 0 4%;
     background:var(--primary);
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     position: relative;
     gap: 30px;
 }
@@ -110,6 +109,7 @@ nav img{
 }
 
 #hero  span{
+    text-align: center;
     color: var(--accent);
     font-family: "Oswald", sans-serif;
     font-size: 2.5rem;
@@ -242,7 +242,7 @@ h2+p{
 }
 
 .membership-plan-card{
-    flex: 0 0 90%;
+    flex: 0 0 80%;
     text-align: center;
     background: var(--primary);
     padding: 2rem;
@@ -432,13 +432,13 @@ footer{
 
 #classes-table table,#opening-hours-table table{
     border-collapse: collapse;
-    margin: 25px 0;
     font-size: 1em;
     min-width: 400px;
     border-radius: 9px 9px 0 0;
     overflow: hidden;
     box-shadow:0 0 20px #3a3c45b1;
     transition: all 0.3s ease;
+    margin: 0 auto;
 }
 #classes-table thead tr,#opening-hours-table thead tr{
     color: var(--accent);
@@ -537,34 +537,41 @@ footer{
    margin: 2rem;
 }
 
+.trainer-card{
+    
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 2rem;
+    padding: 2rem;
+    background: var(--primary);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.255);
+    transition: all 0.3s ease;
+   
+}
+
 
 .trainer-card figure{
     width: 100%;
-    padding: 2rem;
-    border-radius: 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1rem;
-    background: var(--primary);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.255);
-    margin: 1rem;
-    transition: all 0.3s ease;
+    
 }
 
 
 
-.female figure:hover {
+.female:hover {
     transform: scale(1.01);
-    box-shadow: 0 1rem 2rem rgba(65, 65, 65, 0.277);
+    box-shadow: 0 5px 20px rgba(65, 65, 65, 0.277);
     background: linear-gradient(135deg,var(--primary) 0%,#310d2e 75%, #6E0C32  100%);
 }
 
 
-.male figure:hover {
+.male:hover {
     transform: scale(1.01);
-    box-shadow: 0 1rem 2rem rgba(65, 65, 65, 0.277);
-    background: linear-gradient(135deg,var(--primary) 0%,#18303b 50%, var(--secondary)   100%);
+    box-shadow: 0 5px 20px rgba(65, 65, 65, 0.277);
+    background: linear-gradient(135deg,var(--primary) 0%,#093434 65%, var(--secondary)  100%);
 }
 
 
@@ -794,18 +801,15 @@ input[type="checkbox"]:focus{
 }
 
 #plan-radio{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 1rem;
+   display: flex;
+   align-items: center;
+   gap: 10px;
 }
 
 #registration-form fieldset input:focus,#contact-form input:focus,#contact-form textarea:focus{
     background-color: #dcf763c8;
+    box-shadow: 0 0 10px #b84a00ad;
     outline: none;
-    border: 3px solid var(--secondary);
-    box-shadow: inset 0 0 10px #b84a00d7;
 }
 
 #registration-form fieldset input:hover,#contact-form input:hover{
@@ -967,6 +971,610 @@ iframe:hover{
     transform: scale(1.05);
 }
 
+
+/*js*/
+
+
+.error-message{
+    color: #ff0000;
+    font-weight: bold;
+    text-shadow: 0 0 15px #ff0000;
+    margin-top: 4px;
+    font-size: 12px;
+}
+
+#terms-and-conditions .error-message,#error-plan{
+    font-size: 1.2rem;
+}
+
+
+.select-plan{
+    padding: 0.75rem 1.2rem;
+    background-color: var(--secondary);
+    border: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 1rem;
+    color: var(--text);
+    box-shadow: 0 0 10px #dc55178e;
+    margin: 1rem 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+
+.select-plan:hover{
+    background-color: #8d360e;
+    transform: scaleX(1.05);
+}
+
+.membership-plan.selected{
+    border: 3px solid var(--accent);
+    box-shadow: 0 0 20px #dcf7638e;
+    background:linear-gradient(135deg,#0d2531d2 0%,#1a310dd2 50%, #dcf76333 75%,#dcf76330 100%); 
+}   
+.membership-plan.selected:hover{
+    border: 3px solid var(--accent);
+    box-shadow: 0 0 20px #dcf7638e;
+    background:linear-gradient(135deg,#0d2531d2 0%,#1a310dd2 50%, #dcf76333 75%,#dcf76330 100%); 
+}
+
+
+
+
+
+/*responsive on tablet*/
+@media (min-width: 700px){
+    #membership-plans-container{
+        grid-template-columns: repeat(2,1fr);
+        gap: 20px;
+    }
+    #hero > h1 { font-size: 3rem; }
+    #hero span  { font-size: 3.5rem; }
+    #hero > p   { font-size: 1.25rem; }
+    .gym-facility-card{ flex: 0 0 30rem; }
+    section h2  { font-size: 2rem; }
+    .page-header h1 { font-size: 2.75rem; }
+    .page-header p  { font-size: 1.25rem; }
+    .page-header { padding: 6rem 4rem; }
+    #registration-form fieldset input,
+    #contact-form input { width: 60%; }
+    iframe { width: 450px; height: 550px; }
+    nav ul { gap: 1.25rem; }
+    main { padding: 3rem 5%; }
+    #featured-gym-facilities,
+    #membership-plans { padding: 1.5rem; margin-bottom: 5rem; }
+    .page-header { padding: 6rem 4rem; }
+    #registration-form,#contact-form { padding: 2.5rem; }
+    #registration-form fieldset,
+    #contact-form fieldset { padding: 2rem; margin: 2rem 0; }
+    nav ul { gap: 1.25rem; }
+    nav li a { font-size: 0.9rem; }
+    #contact-us,#location,#opening-hours-table { font-size: 1.1rem; padding: 1.5rem; }
+    #classes-table table,
+    #opening-hours-table table { font-size: 0.85em; }
+    .trainers-cards-container{grid-template-columns: repeat(2,1fr);}
+}
+
+#valid-Form-Modal{
+   display: flex;
+   flex-direction: column;
+   gap: 0.5rem;
+   width: 50%;
+   align-items: center;
+   justify-content: center;
+}
+
+#valid-form-message{
+   display: block;
+   margin-bottom: 2rem;
+   text-align: center;
+   color: var(--accent);
+   text-shadow: 0 0 10px #dcf76382;
+   font-size: 1.5rem;
+   font-weight: bold;
+   text-transform: capitalize;
+}
+
+#mini-cart{
+    position: fixed;
+    z-index: 999;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.2rem;
+    transform: translateY(115%);
+    padding: 1rem;
+    background-color: var(--accent);
+    box-shadow: 0 0px 10px #dcf76373;
+    
+
+}
+
+#mini-cart.visible{
+    transform: translateY(0);
+}
+
+
+#mini-cart span{
+    color: var(--secondary);
+    font-weight: 900;
+    font-size: 1.2rem;
+    padding: 0.25rem;
+    font-family: "oswald",sans-serif;
+    text-shadow: 0 0 5px #dc551792;
+}
+
+#mini-cart strong{
+    font-weight: 1000;
+    text-transform: uppercase;
+    font-size: larger;
+    color: var(--bg);
+}
+
+
+#remove-plan-btn,#proceed-plan-btn{
+    padding: 8px 12px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 0.8rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+}
+#remove-plan-btn{
+    background-color: var(--secondary);
+    color: var(--text);
+}
+#proceed-plan-btn{
+    background-color: var(--text);
+    color: var(--secondary);
+}
+
+#remove-plan-btn:hover,#proceed-plan-btn:hover{
+    background-color: var(--primary);
+}
+
+
+
+#character-counter-msg{
+    margin: 0;
+    align-self: flex-end;
+    margin-right: 5px;
+    color: var(--accent);
+    text-shadow: 0 0 10px var(--accent);
+}
+
+
+
+#character-counter-msg.not-enough{
+    color: #ff0000;
+    text-shadow: 0 0 10px #ff0000;
+}
+
+#toast-notif{
+    line-height: 1;
+    padding: 1.5rem 2rem;
+    color: var(--text);
+    background: #008800;
+    margin: 0 auto;  
+    min-width: 350px;
+    border-radius: 1rem;
+    box-shadow: 0 0 8px #dcf7633b;
+    position: fixed;
+    top: 4rem;  
+    left: 6rem;  
+    z-index: 9999;
+    opacity: 0;
+    transition: all 0.3s ease;
+    
+}
+
+
+#toast-notif.show {
+    opacity: 1;
+}
+
+#toast-notif p{
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+#toast-notif::before{
+    content: "";
+    background: url(imgs/190411.png);
+    display: inline-block;
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding-bottom: 5px;
+    height: 25px;
+    width: 25px;
+}
+
+
+/*classes js*/
+
+
+#filters{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+}
+
+.filter-label{
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: var(--accent);
+    font-family: "Oswald", sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0;
+    white-space: nowrap;
+}
+
+.cute-mark{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.25rem;
+    height: 1.25rem;
+    border-radius: 50%;
+    background: var(--secondary);
+    color: var(--text);
+    font-size: 0.8rem;
+    line-height: 1;
+    box-shadow: 0 0 10px #b84a004f;
+}
+
+.filter-select{
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding: 0.7rem 2.5rem 0.7rem 1rem;
+    border: 1px solid var(--secondary);
+    border-radius: 999px;
+    background-color: var(--primary);
+    color: var(--text);
+    font-weight: 700;
+    letter-spacing: 0;
+    cursor: pointer;
+    box-shadow: 0 0 0 transparent;
+    transition: all 0.2s ease;
+    background-image:
+        linear-gradient(45deg, transparent 50%, var(--accent) 50%),
+        linear-gradient(135deg, var(--accent) 50%, transparent 50%);
+    background-position:
+        calc(100% - 18px) 50%,
+        calc(100% - 12px) 50%;
+    background-size: 6px 6px, 6px 6px;
+    background-repeat: no-repeat;
+}
+
+.filter-select:hover{
+    border-color: var(--accent);
+    box-shadow: 0 0 10px #dcf76340;
+}
+
+.filter-select:focus{
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px #dcf76333;
+}
+
+#dayFilter{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.dayBtn{
+    padding: 0.55rem 0.9rem;
+    border: 1px solid var(--secondary);
+    border-radius: 999px;
+    background: var(--primary);
+    color: var(--text);
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.dayBtn:hover{
+    border-color: var(--accent);
+    box-shadow: 0 0 10px #dcf76340;
+}
+
+.dayBtn.active{
+    background: var(--secondary);
+    border-color: var(--accent);
+    color: var(--text);
+    box-shadow: 0 0 12px #b84a0080;
+}
+
+
+
+.sort-btn{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.35rem;
+    width: 100%;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    font-weight: 700;
+    text-transform: inherit;
+    letter-spacing: 0;
+    cursor: pointer;
+}
+
+.sort-btn:hover{
+    color: var(--accent);
+}
+
+.sort-btn.active{
+    color: var(--accent);
+}
+
+.sort-indicator{
+    display: inline-block;
+    min-width: 1ch;
+    color: var(--accent);
+}
+
+/*trainers js*/
+
+
+
+
+
+#trainer-search-wrap{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.75rem;
+    margin: 1rem 0 1.5rem 0;
+}
+
+#trainerSearch{
+    width: min(100%, 28rem);
+    padding: 0.9rem 1rem;
+    border: 1px solid var(--secondary);
+    border-radius: 999px;
+    background: var(--primary);
+    color: var(--text);
+    font: inherit;
+}
+
+#trainerSearch::placeholder{
+    color: #fef9ff9a;
+}
+
+#trainerSearch:focus{
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px #dcf76333;
+}
+
+#no-trainers{
+    color: var(--text);
+    font-family: "Oswald", sans-serif;
+    font-size: 1.2rem;
+    margin: 1rem 0;
+}
+
+
+
+
+
+
+.trainers-cards-container{
+   display: grid;
+   grid-template-columns: 1fr;
+   gap: 1.5rem;
+   margin: 2rem;
+}
+
+.trainer-card{
+    
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 2rem;
+    padding: 2rem;
+    background: var(--primary);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.255);
+    transition: all 0.3s ease;
+    cursor: pointer;
+   
+}
+
+.trainer-card figure{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    
+}
+
+
+
+.female:hover {
+    transform: scale(1.01);
+    box-shadow: 0 5px 20px rgba(65, 65, 65, 0.277);
+    background: linear-gradient(135deg,var(--primary) 0%,#310d2e 75%, #6E0C32  100%);
+}
+
+
+.male:hover {
+    transform: scale(1.01);
+    box-shadow: 0 5px 20px rgba(65, 65, 65, 0.277);
+    background: linear-gradient(135deg,var(--primary) 0%,#093434 65%, var(--secondary)  100%);
+}
+
+
+
+.trainer-card figure img{
+    width: 80%;       
+    max-width: 250px; 
+    aspect-ratio: 1/1; 
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 0 20px #0c0d12;
+}
+
+.trainer-card figcaption{
+    text-decoration: none;
+    color: var(--text);
+    font-weight: 500;    
+
+}
+img[alt="trainer picture"]{
+    font-size: 0.5em;
+    text-align: center;
+    color: var(--accent);
+    font-weight: bold;
+    text-transform: uppercase;
+    
+}
+
+.trainer-card figcaption .title{
+    font-weight: bold;
+    color: var(--accent);
+    font-family: "Oswald", sans-serif;
+    font-size: 20px;
+    text-decoration: underline;
+    text-decoration-style: wavy;
+    text-decoration-color: #dcf7639a;
+    text-decoration-skip-ink: all ;
+}
+
+.trainer-card figcaption a{
+    text-decoration: none;
+    color: var(--text);
+    font-family: "Oswald" , sans-serif;
+    font-size: 35px;
+    display: block;
+    text-align: center;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 10px var(--text);
+    transition: all 0.3s ease;
+}
+
+.trainer-card figcaption a:hover{
+    color: var(--secondary);
+    text-align: center;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 5px var(--secondary);
+
+}
+
+.trainer-modal{
+    position: fixed;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    padding: 1rem;
+    background: rgba(13, 37, 49, 0.82);
+    z-index: 2000;
+}
+
+.trainer-modal[hidden]{
+    display: none;
+}
+
+.trainer-modal-panel{
+    position: relative;
+    width: min(100%, 42rem);
+    max-height: 90vh;
+    overflow: auto;
+    padding: 1.5rem;
+    border-radius: 1.25rem;
+    background: var(--primary);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.45);
+    color: var(--text);
+}
+
+.trainer-modal-panel img{
+    width: 100%;
+    max-height: 280px;
+    object-fit: cover;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+}
+
+.trainer-modal-panel h3{
+    font-family: "Oswald", sans-serif;
+    font-size: 2rem;
+    color: var(--accent);
+    margin-bottom: 0.5rem;
+}
+
+.trainer-modal-panel h4{
+    font-family: "Oswald", sans-serif;
+    color: var(--accent);
+    margin: 1rem 0 0.5rem;
+}
+
+.trainer-modal-panel ul{
+    margin-left: 1.25rem;
+    line-height: 1.8;
+}
+
+.modal-close{
+    position: absolute;
+    top: 0.5rem;
+    right: 0.75rem;
+    border: 0;
+    background: transparent;
+    color: var(--text);
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+body.modal-open{
+    overflow: hidden;
+}
+#work-with-us address a{
+    font-family: "Oswald" , sans-serif;
+    font-style: italic;
+    color: var(--secondary);
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 700;
+
+}
+
+#work-with-us address a:hover{
+    color: var(--text);
+    transition: all 0.2s ease;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*responsive on desktop*/
 @media (min-width: 1024px){
     #membership-plans-container{
@@ -1009,36 +1617,3 @@ iframe:hover{
     #contact-form-and-info{flex-direction:row;flex-wrap:wrap;justify-content: center;align-items: stretch;gap: 3rem;}
 }
 
-
-/*responsive on tablet*/
-@media (min-width: 768px)and(max-width: 1023px){
-    #membership-plans-container{
-        grid-template-columns: repeat(2,1fr);
-    }
-    #hero > h1 { font-size: 3rem; }
-    #hero span  { font-size: 3.5rem; }
-    #hero > p   { font-size: 1.25rem; }
-    .gym-facility-card{ flex: 0 0 20rem; }
-    .membership-plan-card { flex: 0 0 21rem; }
-    section h2  { font-size: 2rem; }
-    .page-header h1 { font-size: 2.75rem; }
-    .page-header p  { font-size: 1.25rem; }
-    .page-header { padding: 6rem 4rem; }
-    #registration-form fieldset input,
-    #contact-form input { width: 60%; }
-    iframe { width: 450px; height: 550px; }
-    nav ul { gap: 1.25rem; }
-    main { padding: 3rem 5%; }
-    #featured-gym-facilities,
-    #membership-plans { padding: 1.5rem; margin-bottom: 5rem; }
-    .page-header { padding: 6rem 4rem; }
-    #registration-form,#contact-form { padding: 2.5rem; }
-    #registration-form fieldset,
-    #contact-form fieldset { padding: 2rem; margin: 2rem 0; }
-    nav ul { gap: 1.25rem; }
-    nav li a { font-size: 0.9rem; }
-    #contact-us,#location,#opening-hours-table { font-size: 1.1rem; padding: 1.5rem; }
-    #classes-table table,
-    #opening-hours-table table { font-size: 0.85em; }
-    .trainers-cards-container{grid-template-columns: repeat(2,1fr);}
-}

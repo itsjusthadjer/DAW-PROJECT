@@ -31,6 +31,11 @@
  <main>
         <section id="trainers-grid">
             <h2>Our Trainers</h2>
+            <div id="trainer-search-wrap">
+                <label class="filter-label" for="trainerSearch">Search trainers</label>
+                <input id="trainerSearch" type="search" placeholder="Search by name or specialty">
+            </div>
+            <p id="no-trainers" hidden>No trainers found</p>
             <div class="trainers-cards-container">
                 <div class="trainer-card female">
                     <article>
@@ -126,7 +131,7 @@
 
 
     <!--FOOTER SECTION-->
-    <footer>
+   <footer>
         <div id="footer-columns">
             <div class="footer-column">
                <h3>Contact Info</h3>
@@ -154,6 +159,22 @@
         </div>
         <p>&copy; 2026 Grymus Gym ,All rights reserved.</p>
    </footer>
+
+   <div id="trainerModal" class="trainer-modal" hidden>
+      <div class="trainer-modal-panel" role="dialog" aria-modal="true" aria-labelledby="trainerModalName">
+         <button type="button" class="modal-close" aria-label="Close modal">&times;</button>
+         <img id="trainerModalPhoto" src="" alt="">
+         <h3 id="trainerModalName"></h3>
+         <p id="trainerModalSpecialty"></p>
+         <p id="trainerModalBio"></p>
+         <div>
+            <h4>Class Schedule</h4>
+            <ul id="trainerModalSchedule"></ul>
+         </div>
+      </div>
+   </div>
+
+   <script src="trainers.js"></script>
 
 </body>
 </html>

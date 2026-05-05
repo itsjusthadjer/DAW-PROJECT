@@ -24,26 +24,40 @@
         </ul>
     </nav>
 
+    <!--Toast Notification-->
+    <div id="toast-notif">
+        <p>Success</p>
+        <sub>Submitted Successfully</sub>
+    </div>
+
     <main id="contact-form-and-info">
         <!--USER CONTACT FORM SECTION-->
         <section id="contact-form">
             <h2>Contact Form</h2>
-            <form>
+            <form id="contact-registration">
                 <fieldset>
                     <legend>Enter your personal information</legend>
-                    <label for="name">Name: </label>
-                    <input type="text" id="name" placeholder="your name.." name="name" required>
+                    <label for="name-contact">Name: </label>
+                    <input type="text" id="name-contact" placeholder="your name.." name="name">
+                    <p id="name-error" class="error-message"></p>
 
-                    <label for="email">Email: </label>
-                    <input type="email" id="email" placeholder="youremail@example.com" name="user-email" required>
+
+                    <label for="email-contact">Email: </label>
+                    <input type="email" id="email-contact" placeholder="youremail@example.com" name="user-email">
+                    <p id="email-contact-error" class="error-message"></p>
 
                     <label for="subject">Subject: </label>
                     <input type="text" id="subject" placeholder="subject...">
+                    <p id="subject-error" class="error-message"></p>
+
 
                     <label for="message">Your Message: </label>
                     <textarea name="message" id="message" rows="6"></textarea>
+                    <sub id="character-counter-msg" class="enough not-enough">0 character/s</sub>
+                    <p id="message-error" class="error-message"></p>
+                    
 
-                    <button>Send</button>
+                    <button type="submit">Send</button>
                 </fieldset>
             </form>
         </section>
@@ -131,8 +145,8 @@
         </div>
         <p>&copy; 2026 Grymus Gym ,All rights reserved.</p>
    </footer>
-
-
+   <script src="script.js"></script>
+  
 
 </body>
 </html>

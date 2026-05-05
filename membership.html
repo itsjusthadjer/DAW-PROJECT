@@ -28,7 +28,17 @@
         <p>Explore Our Membership Plans and choose your path.</p>
     </header>
 
-
+    <div id="mini-cart">
+        <div>
+            <span>Selected Plan: </span>
+            <strong id="cart-plan-name"></strong>
+            <span id="cart-plan-price"></span>
+        </div>
+        <div>
+            <button id="remove-plan-btn">Remove</button>
+            <button id="proceed-plan-btn">Proceed To Register</button>
+        </div>
+    </div>
     <main>
 
         <!--MEMBERSHIP PLAN CARDS SECTION-->
@@ -60,6 +70,7 @@
                       <dt>Wi-Fi</dt>
                       <dd>Free Wi-Fi inside the gym.</dd>
                   </dl>
+                  <button class="select-plan">Select Plan</button>
               </div>
               <div class="membership-plan recommended" >
                   <h3><span class="badge">Silver</span> /Quarterly</h3>
@@ -84,6 +95,7 @@
                       <dt>Customized workout program</dt>
                       <dd>Studied program updated monthly.</dd>
                   </dl>
+                  <button class="select-plan">Select Plan</button>
               </div>
               <div class="membership-plan">
                   <h3><span>Gold</span> /Annual</h3>
@@ -105,23 +117,28 @@
                       <dt>VIP Locker & Recovery Zone</dt>
                       <dd>Dedicated recovery area.</dd>
                   </dl>
+                  <button class="select-plan">Select Plan</button>
               </div>
            </div>
        </section>
        <!--REGISTRATION FORM-->
        <section id="registration-form">
            <h2>Register Now</h2>
-           <form>
+           <form id="register">
             <fieldset>
                 <legend>Personal Information</legend>
                 <label for="Full-Name">Full Name: </label>
-                <input type="text" placeholder="Your Full Name" id="Full-Name" name="fullname" required>
+                <input type="text" placeholder="Your Full Name" id="Full-Name" name="fullname">
+                <p id="error-fullname" class="error-message"></p>
                 <label for="email">Email:</label>
-                <input type="email" placeholder="youremail@example.com" id="email" name="email" required>
+                <input type="email" placeholder="youremail@example.com" id="email" name="email">
+                <p id="error-email" class="error-message"></p>
                 <label for="phone">Phone: </label>
-                <input type="tel" placeholder="+213 000 000 000" id="phone" name="phone" required>
+                <input type="tel" placeholder="+213 000 000 000" id="phone" name="phone">
+                <p id="error-phone" class="error-message"></p>
                 <label for="date-of-birth">Date of Birth: </label>
-                <input type="date" id="date-of-birth" name="dateofbirth" required>
+                <input type="date" id="date-of-birth" name="dateofbirth">
+                <p id="error-dateOfBirth" class="error-message"></p>
             </fieldset>
             <fieldset >
                 <legend>Membership Plan</legend>
@@ -135,17 +152,20 @@
                     <label>
                         <input type="radio" name="plan" value="gold">Gold
                     </label>
+                    
                 </div>
-                
+                <p id="error-plan" class="error-message"></p>
             </fieldset>
             <div id="terms-and-conditions">
                 <label for="agree">I agree to the <a href="terms-and-conditions.html">Terms and Conditions</a></label>
-                <input type="checkbox" id="agree" name="agree" required>
+                <input type="checkbox" id="agree" name="agree">
+                <p id="error-terms" class="error-message"></p>
                 <button type="submit">Submit</button>
             </div>
-           
+            <p id="valid-form-message"></p>
            </form>
        </section>
+      
     </main>
    <footer>
         <div id="footer-columns">
@@ -175,5 +195,7 @@
         </div>
         <p>&copy; 2026 Grymus Gym ,All rights reserved.</p>
    </footer>
+   <script src="script.js"></script>
+   
 </body>
 </html>

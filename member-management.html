@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="admin.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Syne:wght@400..800&display=swap" rel="stylesheet">
+</head>
+<body class="admin-layout">
+
+      <!--SIDE BAR NAVIGATION-->
+   <aside>
+      <nav id="sidebar-nav">
+        <img src="imgs-admin/logo.png" alt="">
+        <ul>
+            <li><a href="admin-dashboard.html">Home</a></li>
+            <li><a href="member-management.html">Members</a></li>
+            <li><a href="">Classes</a></li>
+            <li><a href="">Subscriptions</a></li>
+            <li><a href="">Trainers</a></li>
+            <li><a href="">Orders</a></li>
+        </ul>
+      </nav>
+   </aside>
+
+
+
+   <main>
+      <!--MEMBERS MANAGEMENT SECTION-->
+      <section id="members-section">
+        <h2>Member Management</h2>
+
+        <!-- SEARCH AND FILTER -->
+        <div id="members-controls">
+            <input type="text" id="search-input" placeholder="Search by name or email">
+            <select id="plan-filter">
+                <option value="All">All Plans</option>
+                <option value="Bronze">Bronze</option>
+                <option value="Silver">Silver</option>
+                <option value="Gold">Gold</option>
+            </select>
+            <p>Total Members: <span id="member-count">0</span></p>
+        </div>
+
+        <!-- MEMBERS TABLE -->
+        <table id="members-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Plan</th>
+                    <th>Join Date</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+
+
+
+
+         <!-- ADD MEMBER FORM -->
+        <div id="add-member-form">
+            <h3>Add New Member</h3>
+            <input type="text" id="admin-name" placeholder="Full Name">
+            <input type="email" id="admin-email" placeholder="Email">
+            <input type="text" id="admin-phone" placeholder="Phone">
+            <select id="admin-plan">
+                <option value="">Select Plan</option>
+                <option value="Bronze">Bronze</option>
+                <option value="Silver">Silver</option>
+                <option value="Gold">Gold</option>
+            </select>
+            <input type="date" id="admin-joindate">
+            <button type="button" id="add-member-btn">Add Member</button>
+            <p id="add-member-error"></p>
+        </div>
+      </section>
+
+    <!-- EDIT MEMBER MODAL -->
+      <div id="edit-modal" class="modal hidden">
+        <div class="modal-content">
+            <h3>Edit Member</h3>
+            <input type="text" id="edit-name" placeholder="Full Name">
+            <input type="email" id="edit-email" placeholder="Email">
+            <input type="text" id="edit-phone" placeholder="Phone">
+            <select id="edit-plan">
+                <option value="Bronze">Bronze</option>
+                <option value="Silver">Silver</option>
+                <option value="Gold">Gold</option>
+            </select>
+            <input type="date" id="edit-joindate">
+            <button type="button" id="save-edit-btn">Save</button>
+            <button type="button" id="cancel-edit-btn">Cancel</button>
+        </div>
+      </div>
+
+
+
+
+
+   </main>
+   
+   <footer>
+    <p>&copy; 2026 Grymus Gym Admin Panel . Version 1.0</p>
+   </footer>
+    
+   
+   <script src="admin.js"></script>
+</body>
+</html>
